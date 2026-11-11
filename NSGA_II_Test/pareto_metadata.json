@@ -1,0 +1,16 @@
+{
+  "fecha": "2026-11-04T16:15:20.731423",
+  "pop_size": 8,
+  "n_gen": 5,
+  "seed": 42,
+  "n_years": 1,
+  "configuracion": {
+    "capex_pv": 600.0,
+    "capex_wind": 1200.0,
+    "capex_batt": 400.0,
+    "capex_diesel": 200.0,
+    "budget_max": 2000000.0,
+    "area_max_m2": 10000.0
+  },
+  "n_soluciones": 8
+}

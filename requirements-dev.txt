@@ -1,0 +1,5 @@
+# Dependencias para ejecutar las pruebas del backend
+# Instalar con: pip install -r requirements-dev.txt
+pytest>=8.0.0
+pytest-asyncio>=0.21.0
+respx>=0.21.1
