@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Entorno virtual
+venv/
+.env/
+.venv/
+
+# Artefactos (modelos entrenados, configuraciones generadas)
+artifacts/
+
+# Datos
+data/
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pruebas y cobertura
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Archivos temporales
+*.joblib
+*.bak
+*.tmp
+~$*.xlsx
+~$*.docx
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store

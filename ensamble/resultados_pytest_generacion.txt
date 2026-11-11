@@ -1,0 +1,15 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.0, pytest-9.1.1, pluggy-1.6.0 -- D:\gemelo-digital-main\backend\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\gemelo-digital-main\backend
+configfile: pytest.ini
+plugins: anyio-4.15.1, mock-3.14.0, asyncio-1.4.0, respx-0.23.1, platformdirs-4.13.6
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 4 items
+
+test\generacion.py::TestGeneracion::test_cp08_generar_segmentacion_generacion PASSED [ 25%]
+test\generacion.py::TestGeneracion::test_cp09_entrenar_modelos_generacion PASSED [ 50%]
+test\generacion.py::TestGeneracion::test_cp14_prediccion_generacion_archivo PASSED [ 75%]
+test\generacion.py::TestGeneracion::test_cp15_prediccion_generacion_manual PASSED [100%]
+
+======================== 4 passed in 747.96s (0:12:27) ========================
