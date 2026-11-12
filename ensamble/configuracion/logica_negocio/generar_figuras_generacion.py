@@ -212,10 +212,12 @@ def fig_mae_segmento():
 
 def fig_r2_segmento():
     fig, ax = plt.subplots(figsize=(10, 5))
-    x = np.arange(len(SEGMENTOS))
+    # Omitir segmento 0 (noche) porque la varianza es despreciable
+    segmentos_plot = [1, 2, 3, 4, 5]
+    x = np.arange(len(segmentos_plot))
     w = 0.35
-    rf = R2_SEGMENTO["Random Forest"]
-    xg = R2_SEGMENTO["XGBoost"]
+    rf = R2_SEGMENTO["Random Forest"][1:]  # omitir el primer valor
+    xg = R2_SEGMENTO["XGBoost"][1:]        # omitir el primer valor
 
     ax.bar(x - w/2, rf, w, label="Random Forest", color=COLOR_RF, edgecolor="white")
     ax.bar(x + w/2, xg, w, label="XGBoost", color=COLOR_XGB, edgecolor="white")
@@ -225,9 +227,9 @@ def fig_r2_segmento():
         ax.text(i + w/2, v2 + 0.01, f"{v2:.3f}", ha="center", fontsize=8)
 
     ax.set_xticks(x)
-    ax.set_xticklabels([f"Seg {s}" for s in SEGMENTOS])
+    ax.set_xticklabels([f"Seg {s}" for s in segmentos_plot])
     ax.set_ylabel("R²")
-    ax.set_title("R² por segmento — Generación", fontweight="bold")
+    ax.set_title("R² por segmento — Generación (sin segmento 0)", fontweight="bold")
     ax.legend()
     ax.grid(axis="y", alpha=0.3)
     ax.set_ylim(0, 1.05)
@@ -237,6 +239,7 @@ def fig_r2_segmento():
     plt.savefig(ruta, bbox_inches="tight")
     plt.close()
     print(f"✓ {ruta}")
+
 
 
 # ============================================================

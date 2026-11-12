@@ -5,11 +5,15 @@ rootdir: D:\gemelo-digital-main\backend
 configfile: pytest.ini
 plugins: anyio-4.15.1, mock-3.14.0, asyncio-1.4.0, respx-0.23.1, platformdirs-4.13.6
 asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
-collecting ... collected 4 items
+collecting ... collected 8 items
 
-test\generacion.py::TestGeneracion::test_cp08_generar_segmentacion_generacion PASSED [ 25%]
-test\generacion.py::TestGeneracion::test_cp09_entrenar_modelos_generacion PASSED [ 50%]
-test\generacion.py::TestGeneracion::test_cp14_prediccion_generacion_archivo PASSED [ 75%]
-test\generacion.py::TestGeneracion::test_cp15_prediccion_generacion_manual PASSED [100%]
+ensamble/test/generacion.py::TestGeneracion::test_cp08_generar_segmentacion_generacion PASSED [ 12%]
+ensamble/test/generacion.py::TestGeneracion::test_cp09_entrenar_modelos_generacion PASSED [ 25%]
+ensamble/test/generacion.py::TestGeneracion::test_cp14_prediccion_generacion_archivo PASSED [ 37%]
+ensamble/test/generacion.py::TestGeneracion::test_cp15_prediccion_generacion_manual PASSED [ 50%]
+ensamble/test/generacion.py::TestGeneracion::test_cp27_archivo_formato_incorrecto_generacion PASSED [ 62%]
+ensamble/test/generacion.py::TestGeneracion::test_cp28_archivo_vacio_generacion PASSED [ 75%]
+ensamble/test/generacion.py::TestGeneracion::test_cp29_radiacion_negativa PASSED [ 87%]
+ensamble/test/generacion.py::TestGeneracion::test_cp30_humedad_fuera_rango PASSED [100%]
 
-======================== 4 passed in 747.96s (0:12:27) ========================
+======================= 8 passed in 1058.21s (0:17:38) ========================

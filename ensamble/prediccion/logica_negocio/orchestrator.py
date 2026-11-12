@@ -97,12 +97,30 @@ class Orchestrator:
     
     def _predict_impl(self, muestra: pd.DataFrame) -> dict:
         """Implementación interna de predicción para una muestra."""
+        # Validar muestra vacía
+        if muestra.empty:
+            raise ValueError("Muestra vacía: no se puede predecir")
+        # Validar rangos de variables de entrada
+        self._validar_rangos(muestra)
         segmento = self._obtener_segmento(muestra)
         configuracion = self._obtener_configuracion(segmento)
         predicciones = self._ejecutar_estrategia_batch(muestra, configuracion)
-        return self._construir_resultado(
-            predicciones[0], segmento, configuracion
-        )
+        return self._construir_resultado(predicciones[0], segmento, configuracion)
+
+    def _validar_rangos(self, muestra: pd.DataFrame) -> None:
+        """Valida que las variables de entrada estén en rango."""
+        if 'Hora' in muestra.columns:
+            hora = muestra['Hora'].iloc[0]
+            if not (0 <= hora <= 23):
+                raise ValueError(f"Hora debe estar entre 0 y 23, recibido: {hora}")
+        if 'Mes' in muestra.columns:
+            mes = muestra['Mes'].iloc[0]
+            if not (1 <= mes <= 12):
+                raise ValueError(f"Mes debe estar entre 1 y 12, recibido: {mes}")
+        if 'tipo_dia_bin' in muestra.columns:
+            tipo = muestra['tipo_dia_bin'].iloc[0]
+            if tipo not in (0, 1):
+                raise ValueError(f"tipo_dia_bin debe ser 0 o 1, recibido: {tipo}") 
     
     def _procesar_lote_por_segmento(
         self,

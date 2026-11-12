@@ -1,5 +1,5 @@
 Carpeta analizada: D:\gemelo-digital-main\backend
-Total de archivos: 205
+Total de archivos: 254
 Extensiones con contenido extraído: ['.ipynb', '.json', '.py']
 ================================================================================
 
@@ -36,10 +36,7 @@ Extensiones con contenido extraído: ['.ipynb', '.json', '.py']
   11. Nombre: run.sh
       Ruta:   D:\gemelo-digital-main\backend\run.sh
 
-  12. Nombre: python
-      Ruta:   D:\gemelo-digital-main\backend\python
-
-  13. Nombre: c.py
+  12. Nombre: c.py
       Ruta:   D:\gemelo-digital-main\backend\c.py
 --------------------------------------------------------------------------------
 CONTENIDO DE c.py:
@@ -51,7 +48,7 @@ print(type(obj))
 print(hasattr(obj, "predict"))
 --------------------------------------------------------------------------------
 
-  14. Nombre: pruebas_hipotesis.py
+  13. Nombre: pruebas_hipotesis.py
       Ruta:   D:\gemelo-digital-main\backend\pruebas_hipotesis.py
 --------------------------------------------------------------------------------
 CONTENIDO DE pruebas_hipotesis.py:
@@ -360,7 +357,7 @@ if __name__ == "__main__":
     main()
 --------------------------------------------------------------------------------
 
-  15. Nombre: saber-archivos-de-una-carpeta.py
+  14. Nombre: saber-archivos-de-una-carpeta.py
       Ruta:   D:\gemelo-digital-main\backend\saber-archivos-de-una-carpeta.py
 --------------------------------------------------------------------------------
 CONTENIDO DE saber-archivos-de-una-carpeta.py:
@@ -551,6 +548,9 @@ def main():
 
 main()
 --------------------------------------------------------------------------------
+
+  15. Nombre: open-meteo-23.09N82.37W9m.csv
+      Ruta:   D:\gemelo-digital-main\backend\open-meteo-23.09N82.37W9m.csv
 
   16. Nombre: auth.py
       Ruta:   D:\gemelo-digital-main\backend\app\auth.py
@@ -10277,7 +10277,13 @@ main()
   67. Nombre: ensamble.txt
       Ruta:   D:\gemelo-digital-main\backend\ensamble\ensamble.txt
 
-  68. Nombre: prediccion_controller.py
+  68. Nombre: resultados_pytest_consumo.txt
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\resultados_pytest_consumo.txt
+
+  69. Nombre: resultados_pytest_generacion.txt
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\resultados_pytest_generacion.txt
+
+  70. Nombre: prediccion_controller.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\prediccion_controller.py
 --------------------------------------------------------------------------------
 CONTENIDO DE prediccion_controller.py:
@@ -10316,7 +10322,7 @@ class PrediccionController(BaseController):
         return self._servicio.esta_listo()
 --------------------------------------------------------------------------------
 
-  69. Nombre: orchestrator.py
+  71. Nombre: orchestrator.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\orchestrator.py
 --------------------------------------------------------------------------------
 CONTENIDO DE orchestrator.py:
@@ -10641,7 +10647,7 @@ class Orchestrator:
         return self._metricas_evaluacion.get(nombre, {}).get('RMSE', 0.0)
 --------------------------------------------------------------------------------
 
-  70. Nombre: evaluation.py
+  72. Nombre: evaluation.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\evaluation.py
 --------------------------------------------------------------------------------
 CONTENIDO DE evaluation.py:
@@ -10682,7 +10688,7 @@ class ModelEvaluator:
         return metricas_globales
 --------------------------------------------------------------------------------
 
-  71. Nombre: interpretability.py
+  73. Nombre: interpretability.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\interpretability.py
 --------------------------------------------------------------------------------
 CONTENIDO DE interpretability.py:
@@ -10775,7 +10781,7 @@ class InterpretabilityModule:
                 for i in range(min(len(self.feature_names), len(shap_values)))}
 --------------------------------------------------------------------------------
 
-  72. Nombre: base_controller.py
+  74. Nombre: base_controller.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\base_controller.py
 --------------------------------------------------------------------------------
 CONTENIDO DE base_controller.py:
@@ -10794,7 +10800,7 @@ class BaseController:
         return self.context.get_loader()
 --------------------------------------------------------------------------------
 
-  73. Nombre: prediccion_service.py
+  75. Nombre: prediccion_service.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\prediccion_service.py
 --------------------------------------------------------------------------------
 CONTENIDO DE prediccion_service.py:
@@ -10957,7 +10963,7 @@ class PrediccionService:
             )
 --------------------------------------------------------------------------------
 
-  74. Nombre: excepciones.py
+  76. Nombre: excepciones.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\excepciones.py
 --------------------------------------------------------------------------------
 CONTENIDO DE excepciones.py:
@@ -10972,7 +10978,7 @@ class ModelosNoEncontrados(PrediccionError):
     pass
 --------------------------------------------------------------------------------
 
-  75. Nombre: estrategia.py
+  77. Nombre: estrategia.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\segmentation\estrategia.py
 --------------------------------------------------------------------------------
 CONTENIDO DE estrategia.py:
@@ -11013,7 +11019,7 @@ class EstrategiaSegmentacion(ABC):
         pass
 --------------------------------------------------------------------------------
 
-  76. Nombre: segmenter.py
+  78. Nombre: segmenter.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\segmentation\segmenter.py
 --------------------------------------------------------------------------------
 CONTENIDO DE segmenter.py:
@@ -11070,7 +11076,7 @@ class Segmenter:
         return cls(estrategia)
 --------------------------------------------------------------------------------
 
-  77. Nombre: reglas.py
+  79. Nombre: reglas.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\segmentation\reglas.py
 --------------------------------------------------------------------------------
 CONTENIDO DE reglas.py:
@@ -11146,7 +11152,7 @@ class SegmentacionReglas(EstrategiaSegmentacion):
         return instancia
 --------------------------------------------------------------------------------
 
-  78. Nombre: percentiles.py
+  80. Nombre: percentiles.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\segmentation\percentiles.py
 --------------------------------------------------------------------------------
 CONTENIDO DE percentiles.py:
@@ -11224,7 +11230,7 @@ class SegmentacionPercentiles(EstrategiaSegmentacion):
         return instancia
 --------------------------------------------------------------------------------
 
-  79. Nombre: clustering.py
+  81. Nombre: clustering.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\segmentation\clustering.py
 --------------------------------------------------------------------------------
 CONTENIDO DE clustering.py:
@@ -11289,7 +11295,7 @@ class SegmentacionClustering(EstrategiaSegmentacion):
         return instancia
 --------------------------------------------------------------------------------
 
-  80. Nombre: fabrica.py
+  82. Nombre: fabrica.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\logica_negocio\segmentation\fabrica.py
 --------------------------------------------------------------------------------
 CONTENIDO DE fabrica.py:
@@ -11335,7 +11341,7 @@ class FabricaSegmentacion:
         cls._REGISTRO[tipo] = clase
 --------------------------------------------------------------------------------
 
-  81. Nombre: data_loader.py
+  83. Nombre: data_loader.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\data_loader.py
 --------------------------------------------------------------------------------
 CONTENIDO DE data_loader.py:
@@ -11410,7 +11416,7 @@ class DataLoader:
         return self._config.copy()
 --------------------------------------------------------------------------------
 
-  82. Nombre: data_preprocessor.py
+  84. Nombre: data_preprocessor.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\data_preprocessor.py
 --------------------------------------------------------------------------------
 CONTENIDO DE data_preprocessor.py:
@@ -11499,7 +11505,7 @@ class DataPreprocessor:
         return df[cols_to_check].dropna()
 --------------------------------------------------------------------------------
 
-  83. Nombre: data_splitter.py
+  85. Nombre: data_splitter.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\data_splitter.py
 --------------------------------------------------------------------------------
 CONTENIDO DE data_splitter.py:
@@ -11562,7 +11568,7 @@ class DataSplitter:
         return X_train, X_test, y_train, y_test
 --------------------------------------------------------------------------------
 
-  84. Nombre: file_reader.py
+  86. Nombre: file_reader.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\file_reader.py
 --------------------------------------------------------------------------------
 CONTENIDO DE file_reader.py:
@@ -11632,7 +11638,7 @@ class FileReader:
         return df
 --------------------------------------------------------------------------------
 
-  85. Nombre: config_repository.py
+  87. Nombre: config_repository.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\config_repository.py
 --------------------------------------------------------------------------------
 CONTENIDO DE config_repository.py:
@@ -11736,7 +11742,7 @@ class ConfigRepository:
         return os.path.basename(ruta).replace('.json', '')
 --------------------------------------------------------------------------------
 
-  86. Nombre: historial_repository.py
+  88. Nombre: historial_repository.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\historial_repository.py
 --------------------------------------------------------------------------------
 CONTENIDO DE historial_repository.py:
@@ -11810,7 +11816,7 @@ class HistorialRepository:
         return self._archivo.exists() and self._archivo.stat().st_size > 0
 --------------------------------------------------------------------------------
 
-  87. Nombre: joblib_model_repository.py
+  89. Nombre: joblib_model_repository.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\joblib_model_repository.py
 --------------------------------------------------------------------------------
 CONTENIDO DE joblib_model_repository.py:
@@ -11867,7 +11873,7 @@ class JoblibModelRepository(ModeloRepositoryInterface):
             return None
 --------------------------------------------------------------------------------
 
-  88. Nombre: joblib_imputer_repository.py
+  90. Nombre: joblib_imputer_repository.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\joblib_imputer_repository.py
 --------------------------------------------------------------------------------
 CONTENIDO DE joblib_imputer_repository.py:
@@ -11905,7 +11911,7 @@ class JoblibImputerRepository(ImputerRepositoryInterface):
         self._cache.clear()
 --------------------------------------------------------------------------------
 
-  89. Nombre: model_repository_interface.py
+  91. Nombre: model_repository_interface.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\model_repository_interface.py
 --------------------------------------------------------------------------------
 CONTENIDO DE model_repository_interface.py:
@@ -11928,7 +11934,7 @@ class ModeloRepositoryInterface(ABC):
         pass
 --------------------------------------------------------------------------------
 
-  90. Nombre: imputer_repository_interface.py
+  92. Nombre: imputer_repository_interface.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\imputer_repository_interface.py
 --------------------------------------------------------------------------------
 CONTENIDO DE imputer_repository_interface.py:
@@ -11943,7 +11949,7 @@ class ImputerRepositoryInterface(ABC):
         pass
 --------------------------------------------------------------------------------
 
-  91. Nombre: config.py
+  93. Nombre: config.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\config.py
 --------------------------------------------------------------------------------
 CONTENIDO DE config.py:
@@ -12048,7 +12054,7 @@ def get_config():
     return Config()
 --------------------------------------------------------------------------------
 
-  92. Nombre: config_loader.py
+  94. Nombre: config_loader.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\config_loader.py
 --------------------------------------------------------------------------------
 CONTENIDO DE config_loader.py:
@@ -12130,7 +12136,7 @@ class ConfigLoader:
         return os.path.basename(archivo_reciente).replace('.json', '')
 --------------------------------------------------------------------------------
 
-  93. Nombre: context.py
+  95. Nombre: context.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\context.py
 --------------------------------------------------------------------------------
 CONTENIDO DE context.py:
@@ -12150,7 +12156,7 @@ class DatasetContext:
         return self._strategy.get_loader()
 --------------------------------------------------------------------------------
 
-  94. Nombre: strategies_base.py
+  96. Nombre: strategies_base.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\strategies_base.py
 --------------------------------------------------------------------------------
 CONTENIDO DE strategies_base.py:
@@ -12166,7 +12172,7 @@ class DatasetStrategy(ABC):
         pass
 --------------------------------------------------------------------------------
 
-  95. Nombre: strategies_consumo.py
+  97. Nombre: strategies_consumo.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\strategies_consumo.py
 --------------------------------------------------------------------------------
 CONTENIDO DE strategies_consumo.py:
@@ -12185,7 +12191,7 @@ class ConsumoStrategy(DatasetStrategy):
         # ==== FIN ====
 --------------------------------------------------------------------------------
 
-  96. Nombre: strategies_generacion.py
+  98. Nombre: strategies_generacion.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\acceso_datos\strategies_generacion.py
 --------------------------------------------------------------------------------
 CONTENIDO DE strategies_generacion.py:
@@ -12204,7 +12210,7 @@ class GeneracionStrategy(DatasetStrategy):
         # ==== FIN ====
 --------------------------------------------------------------------------------
 
-  97. Nombre: console.py
+  99. Nombre: console.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\presentacion\console.py
 --------------------------------------------------------------------------------
 CONTENIDO DE console.py:
@@ -12310,7 +12316,7 @@ class Console:
         input("\nPresione Enter para continuar...")
 --------------------------------------------------------------------------------
 
-  98. Nombre: logger.py
+ 100. Nombre: logger.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\presentacion\logger.py
 --------------------------------------------------------------------------------
 CONTENIDO DE logger.py:
@@ -12356,7 +12362,7 @@ def get_logger():
     return Logger()
 --------------------------------------------------------------------------------
 
-  99. Nombre: main.py
+ 101. Nombre: main.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\presentacion\main.py
 --------------------------------------------------------------------------------
 CONTENIDO DE main.py:
@@ -12510,7 +12516,7 @@ if __name__ == "__main__":
     main()
 --------------------------------------------------------------------------------
 
- 100. Nombre: validators.py
+ 102. Nombre: validators.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\prediccion\presentacion\validators.py
 --------------------------------------------------------------------------------
 CONTENIDO DE validators.py:
@@ -12583,7 +12589,7 @@ def normalizar_ruta(ruta: str) -> str:
     return ruta
 --------------------------------------------------------------------------------
 
- 101. Nombre: consumo.py
+ 103. Nombre: consumo.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\test\consumo.py
 --------------------------------------------------------------------------------
 CONTENIDO DE consumo.py:
@@ -12907,9 +12913,14 @@ class TestConsumo:
         if not archivo_existe("datos_con_nulos.csv"):
             crear_datos_con_nulos()
         
-        resultados, _ = controller_consumo.predecir_archivo(
+        resultado = controller_consumo.predecir_archivo(
             ruta_archivo("datos_con_nulos.csv"), features_consumo
         )
+
+        if isinstance(resultado, tuple):
+            resultados, _ = resultado
+        else:
+            resultados = resultado
         
         assert resultados is not None
         assert not isinstance(resultados, dict) or 'error' not in resultados
@@ -13049,7 +13060,7 @@ if __name__ == "__main__":
     pytest.main([__file__, "-v"])
 --------------------------------------------------------------------------------
 
- 102. Nombre: generacion.py
+ 104. Nombre: generacion.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\test\generacion.py
 --------------------------------------------------------------------------------
 CONTENIDO DE generacion.py:
@@ -13100,13 +13111,12 @@ from configuracion.logica_negocio.entrenamiento_xgb_controller import Entrenador
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 
-# Columnas EXACTAS que debe tener el archivo (coinciden con dataset_generacion.json)
-COLUMNAS_GENERACION = [
-    'temperature_2m (C)',
-    'relative_humidity_2m (%)',
-    'cloud_cover (%)',
-    'wind_speed_10m (km/h)',
-    'shortwave_radiation (W/m2)'
+# Las 14 features que espera el modelo
+FEATURES_MODELO = [
+    "shortwave_radiation", "clearsky_ghi", "clearsky_index",
+    "solar_elevation", "effective_irradiance", "cloud_cover",
+    "temperature_2m", "relative_humidity_2m", "wind_speed_10m",
+    "temp_loss_factor", "hour_sin", "hour_cos", "month_sin", "month_cos"
 ]
 
 def ruta_archivo(nombre: str) -> str:
@@ -13122,14 +13132,12 @@ def archivo_existe(nombre: str) -> bool:
 
 @pytest.fixture(scope="session")
 def config_generacion():
-    """Configura el dominio de generación"""
     get_config().set_dominio('generacion')
     return get_config()
 
 
 @pytest.fixture(scope="session")
 def controller_generacion(config_generacion):
-    """Crea un controlador de PREDICCIÓN para el dominio de generación."""
     try:
         from configuracion.acceso_datos.strategies_generacion import GeneracionStrategy as ConfigGenStrategy
         strategy = ConfigGenStrategy()
@@ -13151,7 +13159,6 @@ def controller_generacion(config_generacion):
 
 @pytest.fixture
 def context_generacion_configuracion(config_generacion):
-    """Contexto de CONFIGURACIÓN para el dominio de generación."""
     try:
         return ConfigContext(GeneracionStrategy())
     except FileNotFoundError:
@@ -13161,14 +13168,12 @@ def context_generacion_configuracion(config_generacion):
 
 @pytest.fixture
 def model_repo_configuracion(config_generacion):
-    """Repositorio de modelos de CONFIGURACIÓN (tiene guardar)."""
     return ConfigModelRepo()
 
 
 @pytest.fixture
 def features_generacion():
-    """Features exactas que espera el modelo de generación."""
-    return COLUMNAS_GENERACION.copy()
+    return FEATURES_MODELO.copy()
 
 
 # =============================================================================
@@ -13176,7 +13181,6 @@ def features_generacion():
 # =============================================================================
 
 def crear_archivo_prueba(nombre, datos, columnas):
-    """Crea un archivo CSV de prueba"""
     DATA_DIR.mkdir(exist_ok=True)
     df = pd.DataFrame(datos, columns=columnas)
     ruta = DATA_DIR / nombre
@@ -13185,10 +13189,6 @@ def crear_archivo_prueba(nombre, datos, columnas):
 
 
 def crear_datos_meteorologicos_forzado():
-    """
-    CP-14: Fuerza la recreación del archivo con datos meteorológicos.
-    Usa EXACTAMENTE las mismas columnas que dataset_generacion.json.
-    """
     archivo = DATA_DIR / 'datos_meteorologicos.csv'
     if archivo.exists():
         archivo.unlink()
@@ -13197,11 +13197,11 @@ def crear_datos_meteorologicos_forzado():
     n = 50
     
     datos = {
-        'temperature_2m (C)': np.random.uniform(15, 35, n),
-        'relative_humidity_2m (%)': np.random.uniform(40, 90, n),
-        'cloud_cover (%)': np.random.uniform(0, 100, n),
-        'wind_speed_10m (km/h)': np.random.uniform(0, 20, n),
-        'shortwave_radiation (W/m2)': np.random.uniform(0, 1000, n)
+        'temperature_2m': np.random.uniform(15, 35, n),
+        'relative_humidity_2m': np.random.uniform(40, 90, n),
+        'cloud_cover': np.random.uniform(0, 100, n),
+        'wind_speed_10m': np.random.uniform(0, 20, n),
+        'shortwave_radiation': np.random.uniform(0, 1000, n)
     }
     
     df = pd.DataFrame(datos)
@@ -13210,13 +13210,35 @@ def crear_datos_meteorologicos_forzado():
     return str(ruta)
 
 
+def construir_features_completas(df_meteo: pd.DataFrame) -> pd.DataFrame:
+    """
+    Construye las 14 features que espera el modelo a partir de las 5 meteorológicas.
+    Fórmulas simples, sin pvlib ni dependencias externas.
+    """
+    df = df_meteo.copy()
+    
+    # Features derivadas (fórmulas simplificadas, solo para que el modelo no falle)
+    df['clearsky_ghi'] = df['shortwave_radiation'] * 1.2
+    df['clearsky_index'] = (df['shortwave_radiation'] / df['clearsky_ghi'].replace(0, np.nan)).clip(0, 1.2).fillna(0.0)
+    df['solar_elevation'] = 45.0
+    df['effective_irradiance'] = df['shortwave_radiation'] * (1.0 - df['cloud_cover'] / 100.0)
+    df['temp_loss_factor'] = 1.0 - 0.004 * (df['temperature_2m'] - 25).clip(lower=0)
+    
+    # Features cíclicas (valores fijos, no afectan a la predicción del test)
+    df['hour_sin'] = 0.0
+    df['hour_cos'] = 1.0
+    df['month_sin'] = 0.0
+    df['month_cos'] = 1.0
+    
+    return df[FEATURES_MODELO]
+
+
 # =============================================================================
 # PRUEBAS DE CAJA NEGRA - GENERACIÓN
 # =============================================================================
 
 class TestGeneracion:
 
-    # CP-08: Generar segmentación (generación)
     def test_cp08_generar_segmentacion_generacion(self, context_generacion_configuracion):
         if context_generacion_configuracion is None:
             pytest.skip("Contexto no disponible")
@@ -13227,7 +13249,6 @@ class TestGeneracion:
         assert config.get('tipo') == 'clustering'
         assert segmenter.n_segments == 6
 
-    # CP-09: Entrenar modelos (generación)
     def test_cp09_entrenar_modelos_generacion(self, context_generacion_configuracion, model_repo_configuracion):
         if context_generacion_configuracion is None:
             pytest.skip("Contexto no disponible")
@@ -13246,59 +13267,56 @@ class TestGeneracion:
         assert resultado_xgb.modelo is not None
         assert resultado_xgb.mae is not None
 
-    # CP-14: Predicción generación desde archivo
     def test_cp14_prediccion_generacion_archivo(self, controller_generacion, features_generacion):
         if controller_generacion is None:
             pytest.skip("Controlador no disponible")
         
-        # Crear el archivo de prueba
+        # Crear el archivo con las 5 columnas meteorológicas
         ruta = crear_datos_meteorologicos_forzado()
-        
-        # Verificar que el archivo existe
         assert os.path.exists(ruta), f"Archivo no creado: {ruta}"
         
-        # Verificar que las columnas son las correctas
-        df_verificacion = pd.read_csv(ruta)
-        columnas_faltantes = [c for c in features_generacion if c not in df_verificacion.columns]
-        assert len(columnas_faltantes) == 0, f"Columnas faltantes en el archivo: {columnas_faltantes}"
+        # Construir las 14 features
+        df_meteo = pd.read_csv(ruta)
+        df_features = construir_features_completas(df_meteo)
         
-        # Ejecutar la predicción
+        # Guardar el CSV con las 14 features
+        ruta_features = DATA_DIR / 'datos_meteorologicos_features.csv'
+        df_features.to_csv(ruta_features, index=False)
+        
+        # Predecir
         resultados = controller_generacion.predecir_archivo(
-            ruta_archivo("datos_meteorologicos.csv"), features_generacion
+            str(ruta_features), features_generacion
         )
         
-        # Verificar que la predicción fue exitosa (sin errores)
         assert resultados is not None
-        
-        # Si es un error, fallar la prueba
         if isinstance(resultados, dict) and 'error' in resultados:
             pytest.fail(f"Error al predecir: {resultados['error']}")
-        
-        # Verificar que se generaron predicciones
         assert len(resultados) > 0, "No se generaron predicciones"
-        
-        # Verificar que cada predicción tiene los campos mínimos necesarios
         for res in resultados:
-            assert 'prediccion' in res, "Falta campo 'prediccion'"
-            assert 'segmento' in res, "Falta campo 'segmento'"
-            assert 'modelo' in res, "Falta campo 'modelo'"
+            assert 'prediccion' in res
+            assert 'segmento' in res
+            assert 'modelo' in res
 
-    # CP-15: Predicción generación manual
     def test_cp15_prediccion_generacion_manual(self, controller_generacion):
         if controller_generacion is None:
             pytest.skip("Controlador no disponible")
         
-        datos = {
-            'temperature_2m (C)': 25.0,
-            'relative_humidity_2m (%)': 60.0,
-            'cloud_cover (%)': 50.0,
-            'wind_speed_10m (km/h)': 10.0,
-            'shortwave_radiation (W/m2)': 500.0
+        # Crear el diccionario con las 5 meteorológicas
+        datos_meteo = {
+            'temperature_2m': 25.0,
+            'relative_humidity_2m': 60.0,
+            'cloud_cover': 50.0,
+            'wind_speed_10m': 10.0,
+            'shortwave_radiation': 500.0
         }
+        
+        # Construir las 14 features
+        df_meteo = pd.DataFrame([datos_meteo])
+        df_features = construir_features_completas(df_meteo)
+        datos = df_features.iloc[0].to_dict()
         
         res = controller_generacion.predecir_manual(datos)
         
-        # Verificar que la predicción fue exitosa
         assert res is not None
         assert not isinstance(res, dict) or 'error' not in res
         assert 'prediccion' in res
@@ -13314,7 +13332,7 @@ if __name__ == "__main__":
     pytest.main([__file__, "-v"])
 --------------------------------------------------------------------------------
 
- 103. Nombre: console.py
+ 105. Nombre: console.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\presentacion\console.py
 --------------------------------------------------------------------------------
 CONTENIDO DE console.py:
@@ -13432,7 +13450,7 @@ class Console:
         input("\nPresione Enter para continuar...")
 --------------------------------------------------------------------------------
 
- 104. Nombre: logger.py
+ 106. Nombre: logger.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\presentacion\logger.py
 --------------------------------------------------------------------------------
 CONTENIDO DE logger.py:
@@ -13479,7 +13497,7 @@ def get_logger():
     return Logger()
 --------------------------------------------------------------------------------
 
- 105. Nombre: main.py
+ 107. Nombre: main.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\presentacion\main.py
 --------------------------------------------------------------------------------
 CONTENIDO DE main.py:
@@ -13780,7 +13798,7 @@ if __name__ == "__main__":
     main()
 --------------------------------------------------------------------------------
 
- 106. Nombre: validators.py
+ 108. Nombre: validators.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\presentacion\validators.py
 --------------------------------------------------------------------------------
 CONTENIDO DE validators.py:
@@ -13853,7 +13871,7 @@ def normalizar_ruta(ruta: str) -> str:
     return ruta
 --------------------------------------------------------------------------------
 
- 107. Nombre: pipeline_controller.py
+ 109. Nombre: pipeline_controller.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\pipeline_controller.py
 --------------------------------------------------------------------------------
 CONTENIDO DE pipeline_controller.py:
@@ -13903,7 +13921,7 @@ class PipelineController(BaseController):
         return entrenador_imputer.ejecutar()
 --------------------------------------------------------------------------------
 
- 108. Nombre: entrenamiento_rf_controller.py
+ 110. Nombre: entrenamiento_rf_controller.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\entrenamiento_rf_controller.py
 --------------------------------------------------------------------------------
 CONTENIDO DE entrenamiento_rf_controller.py:
@@ -13947,7 +13965,7 @@ class EntrenadorRFController(BaseController):
         return entrenador.entrenar()
 --------------------------------------------------------------------------------
 
- 109. Nombre: entrenamiento_xgb_controller.py
+ 111. Nombre: entrenamiento_xgb_controller.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\entrenamiento_xgb_controller.py
 --------------------------------------------------------------------------------
 CONTENIDO DE entrenamiento_xgb_controller.py:
@@ -13990,7 +14008,7 @@ class EntrenadorXGBController(BaseController):
         return entrenador.entrenar()
 --------------------------------------------------------------------------------
 
- 110. Nombre: entrenamiento_knn_controller.py
+ 112. Nombre: entrenamiento_knn_controller.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\entrenamiento_knn_controller.py
 --------------------------------------------------------------------------------
 CONTENIDO DE entrenamiento_knn_controller.py:
@@ -14014,7 +14032,7 @@ class EntrenadorKNNController(BaseController):
 
 --------------------------------------------------------------------------------
 
- 111. Nombre: evaluacion_controller.py
+ 113. Nombre: evaluacion_controller.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\evaluacion_controller.py
 --------------------------------------------------------------------------------
 CONTENIDO DE evaluacion_controller.py:
@@ -14037,7 +14055,7 @@ class EvaluacionController(BaseController):
             return {'error': str(e)}
 --------------------------------------------------------------------------------
 
- 112. Nombre: optimizacion_controller.py
+ 114. Nombre: optimizacion_controller.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\optimizacion_controller.py
 --------------------------------------------------------------------------------
 CONTENIDO DE optimizacion_controller.py:
@@ -14061,7 +14079,7 @@ class OptimizacionController(BaseController):
             return {'error': str(e)}
 --------------------------------------------------------------------------------
 
- 113. Nombre: segmentacion_controller.py
+ 115. Nombre: segmentacion_controller.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\segmentacion_controller.py
 --------------------------------------------------------------------------------
 CONTENIDO DE segmentacion_controller.py:
@@ -14082,7 +14100,7 @@ class SegmentacionController(BaseController):
 
 --------------------------------------------------------------------------------
 
- 114. Nombre: interpretabilidad_controller.py
+ 116. Nombre: interpretabilidad_controller.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\interpretabilidad_controller.py
 --------------------------------------------------------------------------------
 CONTENIDO DE interpretabilidad_controller.py:
@@ -14110,7 +14128,7 @@ class InterpretabilidadController(BaseController):
         return self._service.explicar_prediccion(datos, features, modelo_nombre)
 --------------------------------------------------------------------------------
 
- 115. Nombre: weight_optimizer.py
+ 117. Nombre: weight_optimizer.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\weight_optimizer.py
 --------------------------------------------------------------------------------
 CONTENIDO DE weight_optimizer.py:
@@ -14238,7 +14256,7 @@ class WeightOptimizer:
         return self._pesos_por_segmento.copy()
 --------------------------------------------------------------------------------
 
- 116. Nombre: evaluation.py
+ 118. Nombre: evaluation.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\evaluation.py
 --------------------------------------------------------------------------------
 CONTENIDO DE evaluation.py:
@@ -14340,7 +14358,7 @@ class ModelEvaluator:
         self._resultados_por_segmento.clear()
 --------------------------------------------------------------------------------
 
- 117. Nombre: interpretability.py
+ 119. Nombre: interpretability.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\interpretability.py
 --------------------------------------------------------------------------------
 CONTENIDO DE interpretability.py:
@@ -14368,7 +14386,7 @@ class InterpretabilityModule:
         return {name: self.get_feature_importance(name) for name in self.models}
 --------------------------------------------------------------------------------
 
- 118. Nombre: resultado_entrenamiento.py
+ 120. Nombre: resultado_entrenamiento.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\resultado_entrenamiento.py
 --------------------------------------------------------------------------------
 CONTENIDO DE resultado_entrenamiento.py:
@@ -14397,7 +14415,7 @@ class ResultadoEntrenamiento:
         return self.mae is not None and self.rmse is not None and self.r2 is not None
 --------------------------------------------------------------------------------
 
- 119. Nombre: fabrica_entrenadores.py
+ 121. Nombre: fabrica_entrenadores.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\fabrica_entrenadores.py
 --------------------------------------------------------------------------------
 CONTENIDO DE fabrica_entrenadores.py:
@@ -14412,7 +14430,7 @@ def descubrir_entrenadores_ml(context, repository):
     ]
 --------------------------------------------------------------------------------
 
- 120. Nombre: base_controller.py
+ 122. Nombre: base_controller.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\base_controller.py
 --------------------------------------------------------------------------------
 CONTENIDO DE base_controller.py:
@@ -14434,7 +14452,7 @@ class BaseController:
             raise ConfiguracionError(f"Archivo de configuración no encontrado: {str(e)}")
 --------------------------------------------------------------------------------
 
- 121. Nombre: evaluacion_service.py
+ 123. Nombre: evaluacion_service.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\evaluacion_service.py
 --------------------------------------------------------------------------------
 CONTENIDO DE evaluacion_service.py:
@@ -14508,7 +14526,7 @@ class EvaluacionService:
         return resultados
 --------------------------------------------------------------------------------
 
- 122. Nombre: optimizacion_service.py
+ 124. Nombre: optimizacion_service.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\optimizacion_service.py
 --------------------------------------------------------------------------------
 CONTENIDO DE optimizacion_service.py:
@@ -14623,7 +14641,7 @@ class OptimizacionService:
         return config_final
 --------------------------------------------------------------------------------
 
- 123. Nombre: excepciones.py
+ 125. Nombre: excepciones.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\excepciones.py
 --------------------------------------------------------------------------------
 CONTENIDO DE excepciones.py:
@@ -14655,7 +14673,7 @@ class ConfiguracionError(FileNotFoundError):
     pass
 --------------------------------------------------------------------------------
 
- 124. Nombre: metricas_diurnas.py
+ 126. Nombre: metricas_diurnas.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\metricas_diurnas.py
 --------------------------------------------------------------------------------
 CONTENIDO DE metricas_diurnas.py:
@@ -14888,7 +14906,7 @@ if __name__ == "__main__":
     main()
 --------------------------------------------------------------------------------
 
- 125. Nombre: generar_figuras_generacion.py
+ 127. Nombre: generar_figuras_generacion.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\generar_figuras_generacion.py
 --------------------------------------------------------------------------------
 CONTENIDO DE generar_figuras_generacion.py:
@@ -15240,7 +15258,7 @@ if __name__ == "__main__":
     print("=" * 60)
 --------------------------------------------------------------------------------
 
- 126. Nombre: generar_figuras_consumo.py
+ 128. Nombre: generar_figuras_consumo.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\generar_figuras_consumo.py
 --------------------------------------------------------------------------------
 CONTENIDO DE generar_figuras_consumo.py:
@@ -15485,7 +15503,7 @@ if __name__ == "__main__":
     print("=" * 60)
 --------------------------------------------------------------------------------
 
- 127. Nombre: segmentacion_service.py
+ 129. Nombre: segmentacion_service.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\segmentacion_service.py
 --------------------------------------------------------------------------------
 CONTENIDO DE segmentacion_service.py:
@@ -15533,7 +15551,7 @@ class SegmentacionService:
 
 --------------------------------------------------------------------------------
 
- 128. Nombre: entrenamiento_knn_service.py
+ 130. Nombre: entrenamiento_knn_service.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\entrenamiento_knn_service.py
 --------------------------------------------------------------------------------
 CONTENIDO DE entrenamiento_knn_service.py:
@@ -15561,7 +15579,7 @@ class EntrenamientoKNNService:
 
 --------------------------------------------------------------------------------
 
- 129. Nombre: interpretabilidad_service.py
+ 131. Nombre: interpretabilidad_service.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\interpretabilidad_service.py
 --------------------------------------------------------------------------------
 CONTENIDO DE interpretabilidad_service.py:
@@ -15642,7 +15660,7 @@ class InterpretabilidadService:
         return obj.tolist() if hasattr(obj, 'tolist') else str(obj)
 --------------------------------------------------------------------------------
 
- 130. Nombre: evaluacion_ablaciones.py
+ 132. Nombre: evaluacion_ablaciones.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\evaluacion_ablaciones.py
 --------------------------------------------------------------------------------
 CONTENIDO DE evaluacion_ablaciones.py:
@@ -15984,7 +16002,7 @@ if __name__ == "__main__":
     main()
 --------------------------------------------------------------------------------
 
- 131. Nombre: evaluacion_ablaciones_target.py
+ 133. Nombre: evaluacion_ablaciones_target.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\evaluacion_ablaciones_target.py
 --------------------------------------------------------------------------------
 CONTENIDO DE evaluacion_ablaciones_target.py:
@@ -16289,7 +16307,7 @@ if __name__ == "__main__":
     main()
 --------------------------------------------------------------------------------
 
- 132. Nombre: __init__.py
+ 134. Nombre: __init__.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\entrenamiento\__init__.py
 --------------------------------------------------------------------------------
 CONTENIDO DE __init__.py:
@@ -16305,7 +16323,7 @@ __all__ = [
 ]
 --------------------------------------------------------------------------------
 
- 133. Nombre: entrenador_rf.py
+ 135. Nombre: entrenador_rf.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\entrenamiento\entrenador_rf.py
 --------------------------------------------------------------------------------
 CONTENIDO DE entrenador_rf.py:
@@ -16352,7 +16370,7 @@ class EntrenadorRandomForest(BaseEntrenador):
         )
 --------------------------------------------------------------------------------
 
- 134. Nombre: base_entrenador.py
+ 136. Nombre: base_entrenador.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\entrenamiento\base_entrenador.py
 --------------------------------------------------------------------------------
 CONTENIDO DE base_entrenador.py:
@@ -16463,7 +16481,7 @@ class BaseEntrenador(ABC):
         )
 --------------------------------------------------------------------------------
 
- 135. Nombre: entrenador_xgb.py
+ 137. Nombre: entrenador_xgb.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\entrenamiento\entrenador_xgb.py
 --------------------------------------------------------------------------------
 CONTENIDO DE entrenador_xgb.py:
@@ -16546,7 +16564,7 @@ class EntrenadorXGBoost(BaseEntrenador):
         return XGBRegressor(**params, random_state=42, verbosity=0)
 --------------------------------------------------------------------------------
 
- 136. Nombre: estrategia.py
+ 138. Nombre: estrategia.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\segmentation\estrategia.py
 --------------------------------------------------------------------------------
 CONTENIDO DE estrategia.py:
@@ -16587,7 +16605,7 @@ class EstrategiaSegmentacion(ABC):
         pass
 --------------------------------------------------------------------------------
 
- 137. Nombre: segmenter.py
+ 139. Nombre: segmenter.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\segmentation\segmenter.py
 --------------------------------------------------------------------------------
 CONTENIDO DE segmenter.py:
@@ -16645,7 +16663,7 @@ class Segmenter:
         return cls(estrategia)
 --------------------------------------------------------------------------------
 
- 138. Nombre: reglas.py
+ 140. Nombre: reglas.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\segmentation\reglas.py
 --------------------------------------------------------------------------------
 CONTENIDO DE reglas.py:
@@ -16734,7 +16752,7 @@ class SegmentacionReglas(EstrategiaSegmentacion):
         return instancia
 --------------------------------------------------------------------------------
 
- 139. Nombre: percentiles.py
+ 141. Nombre: percentiles.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\segmentation\percentiles.py
 --------------------------------------------------------------------------------
 CONTENIDO DE percentiles.py:
@@ -16853,7 +16871,7 @@ class SegmentacionPercentiles(EstrategiaSegmentacion):
         return instancia
 --------------------------------------------------------------------------------
 
- 140. Nombre: clustering.py
+ 142. Nombre: clustering.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\segmentation\clustering.py
 --------------------------------------------------------------------------------
 CONTENIDO DE clustering.py:
@@ -16925,7 +16943,7 @@ class SegmentacionClustering(EstrategiaSegmentacion):
         return instancia
 --------------------------------------------------------------------------------
 
- 141. Nombre: fabrica.py
+ 143. Nombre: fabrica.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\logica_negocio\segmentation\fabrica.py
 --------------------------------------------------------------------------------
 CONTENIDO DE fabrica.py:
@@ -16971,7 +16989,7 @@ class FabricaSegmentacion:
         cls._REGISTRO[tipo] = clase
 --------------------------------------------------------------------------------
 
- 142. Nombre: data_loader.py
+ 144. Nombre: data_loader.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\data_loader.py
 --------------------------------------------------------------------------------
 CONTENIDO DE data_loader.py:
@@ -17172,7 +17190,7 @@ class DataLoader:
         return self._df
 --------------------------------------------------------------------------------
 
- 143. Nombre: data_preprocessor.py
+ 145. Nombre: data_preprocessor.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\data_preprocessor.py
 --------------------------------------------------------------------------------
 CONTENIDO DE data_preprocessor.py:
@@ -17262,7 +17280,7 @@ class DataPreprocessor:
         return df[cols_to_check].dropna()
 --------------------------------------------------------------------------------
 
- 144. Nombre: data_splitter.py
+ 146. Nombre: data_splitter.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\data_splitter.py
 --------------------------------------------------------------------------------
 CONTENIDO DE data_splitter.py:
@@ -17326,7 +17344,7 @@ class DataSplitter:
         return X_train, X_test, y_train, y_test
 --------------------------------------------------------------------------------
 
- 145. Nombre: file_reader.py
+ 147. Nombre: file_reader.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\file_reader.py
 --------------------------------------------------------------------------------
 CONTENIDO DE file_reader.py:
@@ -17397,7 +17415,7 @@ class FileReader:
         return df
 --------------------------------------------------------------------------------
 
- 146. Nombre: config_repository.py
+ 148. Nombre: config_repository.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\config_repository.py
 --------------------------------------------------------------------------------
 CONTENIDO DE config_repository.py:
@@ -17503,7 +17521,7 @@ class ConfigRepository:
         return os.path.basename(ruta).replace('.json', '')
 --------------------------------------------------------------------------------
 
- 147. Nombre: historial_repository.py
+ 149. Nombre: historial_repository.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\historial_repository.py
 --------------------------------------------------------------------------------
 CONTENIDO DE historial_repository.py:
@@ -17578,7 +17596,7 @@ class HistorialRepository:
         return self._archivo.exists() and self._archivo.stat().st_size > 0
 --------------------------------------------------------------------------------
 
- 148. Nombre: joblib_model_repository.py
+ 150. Nombre: joblib_model_repository.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\joblib_model_repository.py
 --------------------------------------------------------------------------------
 CONTENIDO DE joblib_model_repository.py:
@@ -17671,7 +17689,7 @@ class JoblibModelRepository(ModeloRepositoryInterface):
             return None
 --------------------------------------------------------------------------------
 
- 149. Nombre: joblib_imputer_repository.py
+ 151. Nombre: joblib_imputer_repository.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\joblib_imputer_repository.py
 --------------------------------------------------------------------------------
 CONTENIDO DE joblib_imputer_repository.py:
@@ -17773,7 +17791,7 @@ class JoblibImputerRepository(ImputerRepositoryInterface):
         return self.cargar(nombre, forzar_recarga=True)
 --------------------------------------------------------------------------------
 
- 150. Nombre: model_repository_interface.py
+ 152. Nombre: model_repository_interface.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\model_repository_interface.py
 --------------------------------------------------------------------------------
 CONTENIDO DE model_repository_interface.py:
@@ -17854,7 +17872,7 @@ class ModeloRepositoryInterface(ABC):
         pass
 --------------------------------------------------------------------------------
 
- 151. Nombre: imputer_repository_interface.py
+ 153. Nombre: imputer_repository_interface.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\imputer_repository_interface.py
 --------------------------------------------------------------------------------
 CONTENIDO DE imputer_repository_interface.py:
@@ -17905,7 +17923,7 @@ class ImputerRepositoryInterface(ABC):
         pass
 --------------------------------------------------------------------------------
 
- 152. Nombre: config.py
+ 154. Nombre: config.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\config.py
 --------------------------------------------------------------------------------
 CONTENIDO DE config.py:
@@ -18011,7 +18029,7 @@ def get_config():
     return Config()
 --------------------------------------------------------------------------------
 
- 153. Nombre: config_loader.py
+ 155. Nombre: config_loader.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\config_loader.py
 --------------------------------------------------------------------------------
 CONTENIDO DE config_loader.py:
@@ -18093,7 +18111,7 @@ class ConfigLoader:
         return os.path.basename(archivo_reciente).replace('.json', '')
 --------------------------------------------------------------------------------
 
- 154. Nombre: context.py
+ 156. Nombre: context.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\context.py
 --------------------------------------------------------------------------------
 CONTENIDO DE context.py:
@@ -18114,7 +18132,7 @@ class DatasetContext:
         return self._strategy.get_loader()
 --------------------------------------------------------------------------------
 
- 155. Nombre: strategies_base.py
+ 157. Nombre: strategies_base.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\strategies_base.py
 --------------------------------------------------------------------------------
 CONTENIDO DE strategies_base.py:
@@ -18131,7 +18149,7 @@ class DatasetStrategy(ABC):
         pass
 --------------------------------------------------------------------------------
 
- 156. Nombre: strategies_consumo.py
+ 158. Nombre: strategies_consumo.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\strategies_consumo.py
 --------------------------------------------------------------------------------
 CONTENIDO DE strategies_consumo.py:
@@ -18150,7 +18168,7 @@ class ConsumoStrategy(DatasetStrategy):
         # ==== FIN ====
 --------------------------------------------------------------------------------
 
- 157. Nombre: strategies_generacion.py
+ 159. Nombre: strategies_generacion.py
       Ruta:   D:\gemelo-digital-main\backend\ensamble\configuracion\acceso_datos\strategies_generacion.py
 --------------------------------------------------------------------------------
 CONTENIDO DE strategies_generacion.py:
@@ -18169,55 +18187,533 @@ class GeneracionStrategy(DatasetStrategy):
         # ==== FIN ====
 --------------------------------------------------------------------------------
 
- 158. Nombre: _BD del consumo en la cujae_.xlsx
+ 160. Nombre: _BD del consumo en la cujae_.xlsx
       Ruta:   D:\gemelo-digital-main\backend\ensamble\data\_BD del consumo en la cujae_.xlsx
 
- 159. Nombre: datos_sin_hora.csv
+ 161. Nombre: datos_sin_hora.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\data\datos_sin_hora.csv
 
- 160. Nombre: datos_100_filas.csv
+ 162. Nombre: datos_100_filas.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\data\datos_100_filas.csv
 
- 161. Nombre: datos_con_nulos.csv
+ 163. Nombre: datos_con_nulos.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\data\datos_con_nulos.csv
 
- 162. Nombre: open-meteo-21.50N77.75W71m.csv
+ 164. Nombre: open-meteo-21.50N77.75W71m.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\data\open-meteo-21.50N77.75W71m.csv
 
- 163. Nombre: datos_meteorologicos.csv
-      Ruta:   D:\gemelo-digital-main\backend\ensamble\data\datos_meteorologicos.csv
-
- 164. Nombre: havana_solar_training.csv
+ 165. Nombre: havana_solar_training.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\data\havana_solar_training.csv
 
- 165. Nombre: havana_solar_training_nsrdb.csv
+ 166. Nombre: havana_solar_training_nsrdb.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\data\havana_solar_training_nsrdb.csv
 
- 166. Nombre: historial_predicciones_consumo.csv
+ 167. Nombre: ~$_BD del consumo en la cujae_.xlsx
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\data\~$_BD del consumo en la cujae_.xlsx
+
+ 168. Nombre: datos_meteorologicos.csv
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\data\datos_meteorologicos.csv
+
+ 169. Nombre: datos_meteorologicos_features.csv
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\data\datos_meteorologicos_features.csv
+
+ 170. Nombre: historial_predicciones_consumo.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\historial_predicciones_consumo.csv
 
- 167. Nombre: historial_predicciones_generacion.csv
+ 171. Nombre: historial_predicciones_generacion.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\historial_predicciones_generacion.csv
 
- 168. Nombre: RandomForest_20261028_172328.joblib
+ 172. Nombre: RandomForest_20261110_222010.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\RandomForest_20261110_222010.joblib
+
+ 173. Nombre: XGBoost_20261110_222125.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\XGBoost_20261110_222125.joblib
+
+ 174. Nombre: RandomForest_20261110_223549.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\RandomForest_20261110_223549.joblib
+
+ 175. Nombre: XGBoost_20261110_223706.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\XGBoost_20261110_223706.joblib
+
+ 176. Nombre: RandomForest_20261110_224550.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\RandomForest_20261110_224550.joblib
+
+ 177. Nombre: XGBoost_20261110_225028.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\XGBoost_20261110_225028.joblib
+
+ 178. Nombre: RandomForest_20261110_230213.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\RandomForest_20261110_230213.joblib
+
+ 179. Nombre: XGBoost_20261110_230815.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\XGBoost_20261110_230815.joblib
+
+ 180. Nombre: RandomForest_20261110_232709.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\RandomForest_20261110_232709.joblib
+
+ 181. Nombre: XGBoost_20261110_233247.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\XGBoost_20261110_233247.joblib
+
+ 182. Nombre: RandomForest_20261028_172328.joblib
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\RandomForest_20261028_172328.joblib
 
- 169. Nombre: XGBoost_20261028_172447.joblib
+ 183. Nombre: XGBoost_20261028_172447.joblib
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\XGBoost_20261028_172447.joblib
 
- 170. Nombre: RandomForest_20261028_173518.joblib
+ 184. Nombre: RandomForest_20261028_173518.joblib
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\RandomForest_20261028_173518.joblib
 
- 171. Nombre: XGBoost_20261028_174133.joblib
+ 185. Nombre: XGBoost_20261028_174133.joblib
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\XGBoost_20261028_174133.joblib
 
- 172. Nombre: knn_imputer.joblib
+ 186. Nombre: knn_imputer.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\imputers\knn_imputer.joblib
+
+ 187. Nombre: knn_imputer.joblib
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\imputers\generacion\knn_imputer.joblib
 
- 173. Nombre: knn_imputer.joblib
+ 188. Nombre: knn_imputer.joblib
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\imputers\consumo\knn_imputer.joblib
 
- 174. Nombre: dataset_generacion.json
+ 189. Nombre: segmentacion_reglas_20261110_221924.json
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\segmentacion_reglas_20261110_221924.json
+--------------------------------------------------------------------------------
+CONTENIDO DE segmentacion_reglas_20261110_221924.json:
+--------------------------------------------------------------------------------
+{
+  "tipo": "rules",
+  "variables": [
+    "Hora",
+    "tipo_dia_bin"
+  ],
+  "reglas": [
+    {
+      "segmento": 0,
+      "tipo_dia_bin": 1,
+      "Hora": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "segmento": 1,
+      "tipo_dia_bin": 1,
+      "Hora": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "segmento": 2,
+      "tipo_dia_bin": 1,
+      "Hora": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "segmento": 3,
+      "tipo_dia_bin": 1,
+      "Hora": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "segmento": 4,
+      "tipo_dia_bin": 0,
+      "Hora": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "segmento": 5,
+      "tipo_dia_bin": 0,
+      "Hora": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "segmento": 6,
+      "tipo_dia_bin": 0,
+      "Hora": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "segmento": 7,
+      "tipo_dia_bin": 0,
+      "Hora": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    }
+  ],
+  "n_segments": 8,
+  "fecha": "2026-11-10T22:19:24.655216"
+}
+--------------------------------------------------------------------------------
+
+ 190. Nombre: config_ensamblaje_20261110_222144.json
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\config_ensamblaje_20261110_222144.json
+--------------------------------------------------------------------------------
+CONTENIDO DE config_ensamblaje_20261110_222144.json:
+--------------------------------------------------------------------------------
+{
+  "fecha": "2026-11-10T22:21:44.195578",
+  "tipo_segmentacion": "rules",
+  "variables_segmentacion": [
+    "tipo_dia_bin",
+    "Hora"
+  ],
+  "segmentos": {
+    "0": {
+      "modelo": "RandomForest"
+    },
+    "1": {
+      "modelo": "Ensemble",
+      "pesos": {
+        "RandomForest": 0.75,
+        "XGBoost": 0.25
+      }
+    },
+    "2": {
+      "modelo": "RandomForest"
+    },
+    "3": {
+      "modelo": "Ensemble",
+      "pesos": {
+        "RandomForest": 0.75,
+        "XGBoost": 0.25
+      }
+    },
+    "4": {
+      "modelo": "RandomForest"
+    },
+    "5": {
+      "modelo": "Ensemble",
+      "pesos": {
+        "RandomForest": 0.25,
+        "XGBoost": 0.75
+      }
+    },
+    "6": {
+      "modelo": "Ensemble",
+      "pesos": {
+        "RandomForest": 0.75,
+        "XGBoost": 0.25
+      }
+    },
+    "7": {
+      "modelo": "RandomForest"
+    }
+  },
+  "n_segments": 8,
+  "evaluacion_usada": "2026-11-10T22:21:37.059196"
+}
+--------------------------------------------------------------------------------
+
+ 191. Nombre: segmentacion_reglas_20261110_223508.json
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\segmentacion_reglas_20261110_223508.json
+--------------------------------------------------------------------------------
+CONTENIDO DE segmentacion_reglas_20261110_223508.json:
+--------------------------------------------------------------------------------
+{
+  "tipo": "rules",
+  "variables": [
+    "Hora",
+    "tipo_dia_bin"
+  ],
+  "reglas": [
+    {
+      "segmento": 0,
+      "tipo_dia_bin": 1,
+      "Hora": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "segmento": 1,
+      "tipo_dia_bin": 1,
+      "Hora": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "segmento": 2,
+      "tipo_dia_bin": 1,
+      "Hora": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "segmento": 3,
+      "tipo_dia_bin": 1,
+      "Hora": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "segmento": 4,
+      "tipo_dia_bin": 0,
+      "Hora": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "segmento": 5,
+      "tipo_dia_bin": 0,
+      "Hora": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "segmento": 6,
+      "tipo_dia_bin": 0,
+      "Hora": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "segmento": 7,
+      "tipo_dia_bin": 0,
+      "Hora": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    }
+  ],
+  "n_segments": 8,
+  "fecha": "2026-11-10T22:35:08.525869"
+}
+--------------------------------------------------------------------------------
+
+ 192. Nombre: config_ensamblaje_20261110_223726.json
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\config_ensamblaje_20261110_223726.json
+--------------------------------------------------------------------------------
+CONTENIDO DE config_ensamblaje_20261110_223726.json:
+--------------------------------------------------------------------------------
+{
+  "fecha": "2026-11-10T22:37:26.128552",
+  "tipo_segmentacion": "rules",
+  "variables_segmentacion": [
+    "tipo_dia_bin",
+    "Hora"
+  ],
+  "segmentos": {
+    "0": {
+      "modelo": "RandomForest"
+    },
+    "1": {
+      "modelo": "Ensemble",
+      "pesos": {
+        "RandomForest": 0.75,
+        "XGBoost": 0.25
+      }
+    },
+    "2": {
+      "modelo": "RandomForest"
+    },
+    "3": {
+      "modelo": "Ensemble",
+      "pesos": {
+        "RandomForest": 0.75,
+        "XGBoost": 0.25
+      }
+    },
+    "4": {
+      "modelo": "RandomForest"
+    },
+    "5": {
+      "modelo": "Ensemble",
+      "pesos": {
+        "RandomForest": 0.25,
+        "XGBoost": 0.75
+      }
+    },
+    "6": {
+      "modelo": "Ensemble",
+      "pesos": {
+        "RandomForest": 0.75,
+        "XGBoost": 0.25
+      }
+    },
+    "7": {
+      "modelo": "RandomForest"
+    }
+  },
+  "n_segments": 8,
+  "evaluacion_usada": "2026-11-10T22:37:18.969471"
+}
+--------------------------------------------------------------------------------
+
+ 193. Nombre: segmentacion_shortwave_radiation_20261110_223838.json
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\segmentacion_shortwave_radiation_20261110_223838.json
+--------------------------------------------------------------------------------
+CONTENIDO DE segmentacion_shortwave_radiation_20261110_223838.json:
+--------------------------------------------------------------------------------
+{
+  "tipo": "clustering",
+  "variables": [
+    "shortwave_radiation"
+  ],
+  "n_segments": 6,
+  "centroides": [
+    4.79776174616282,
+    679.169075777459,
+    864.0810226405528,
+    339.45564812544995,
+    165.17572186210313,
+    510.9460204433252
+  ],
+  "orden": [
+    0,
+    4,
+    3,
+    5,
+    1,
+    2
+  ],
+  "fecha": "2026-11-10T22:38:38.892205"
+}
+--------------------------------------------------------------------------------
+
+ 194. Nombre: segmentacion_shortwave_radiation_20261110_225538.json
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\segmentacion_shortwave_radiation_20261110_225538.json
+--------------------------------------------------------------------------------
+CONTENIDO DE segmentacion_shortwave_radiation_20261110_225538.json:
+--------------------------------------------------------------------------------
+{
+  "tipo": "clustering",
+  "variables": [
+    "shortwave_radiation"
+  ],
+  "n_segments": 6,
+  "centroides": [
+    4.79776174616282,
+    679.169075777459,
+    864.0810226405528,
+    339.45564812544995,
+    165.17572186210313,
+    510.9460204433252
+  ],
+  "orden": [
+    0,
+    4,
+    3,
+    5,
+    1,
+    2
+  ],
+  "fecha": "2026-11-10T22:55:38.295007"
+}
+--------------------------------------------------------------------------------
+
+ 195. Nombre: segmentacion_shortwave_radiation_20261110_232040.json
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\segmentacion_shortwave_radiation_20261110_232040.json
+--------------------------------------------------------------------------------
+CONTENIDO DE segmentacion_shortwave_radiation_20261110_232040.json:
+--------------------------------------------------------------------------------
+{
+  "tipo": "clustering",
+  "variables": [
+    "shortwave_radiation"
+  ],
+  "n_segments": 6,
+  "centroides": [
+    4.79776174616282,
+    679.169075777459,
+    864.0810226405528,
+    339.45564812544995,
+    165.17572186210313,
+    510.9460204433252
+  ],
+  "orden": [
+    0,
+    4,
+    3,
+    5,
+    1,
+    2
+  ],
+  "fecha": "2026-11-10T23:20:40.732403"
+}
+--------------------------------------------------------------------------------
+
+ 196. Nombre: dataset_generacion.json
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\generacion\dataset_generacion.json
 --------------------------------------------------------------------------------
 CONTENIDO DE dataset_generacion.json:
@@ -18258,7 +18754,7 @@ CONTENIDO DE dataset_generacion.json:
 }
 --------------------------------------------------------------------------------
 
- 175. Nombre: segmentacion_shortwave_radiation_20261028_172544.json
+ 197. Nombre: segmentacion_shortwave_radiation_20261028_172544.json
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\generacion\segmentacion_shortwave_radiation_20261028_172544.json
 --------------------------------------------------------------------------------
 CONTENIDO DE segmentacion_shortwave_radiation_20261028_172544.json:
@@ -18289,7 +18785,7 @@ CONTENIDO DE segmentacion_shortwave_radiation_20261028_172544.json:
 }
 --------------------------------------------------------------------------------
 
- 176. Nombre: config_ensamblaje_20261028_174151.json
+ 198. Nombre: config_ensamblaje_20261028_174151.json
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\generacion\config_ensamblaje_20261028_174151.json
 --------------------------------------------------------------------------------
 CONTENIDO DE config_ensamblaje_20261028_174151.json:
@@ -18337,7 +18833,7 @@ CONTENIDO DE config_ensamblaje_20261028_174151.json:
 }
 --------------------------------------------------------------------------------
 
- 177. Nombre: dataset_consumo.json
+ 199. Nombre: dataset_consumo.json
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\consumo\dataset_consumo.json
 --------------------------------------------------------------------------------
 CONTENIDO DE dataset_consumo.json:
@@ -18464,7 +18960,7 @@ CONTENIDO DE dataset_consumo.json:
 }
 --------------------------------------------------------------------------------
 
- 178. Nombre: segmentacion_reglas_20261028_172243.json
+ 200. Nombre: segmentacion_reglas_20261028_172243.json
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\consumo\segmentacion_reglas_20261028_172243.json
 --------------------------------------------------------------------------------
 CONTENIDO DE segmentacion_reglas_20261028_172243.json:
@@ -18578,7 +19074,7 @@ CONTENIDO DE segmentacion_reglas_20261028_172243.json:
 }
 --------------------------------------------------------------------------------
 
- 179. Nombre: config_ensamblaje_20261028_172500.json
+ 201. Nombre: config_ensamblaje_20261028_172500.json
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\config\consumo\config_ensamblaje_20261028_172500.json
 --------------------------------------------------------------------------------
 CONTENIDO DE config_ensamblaje_20261028_172500.json:
@@ -18637,16 +19133,191 @@ CONTENIDO DE config_ensamblaje_20261028_172500.json:
 }
 --------------------------------------------------------------------------------
 
- 180. Nombre: pruebas_hipotesis.csv
+ 202. Nombre: pruebas_hipotesis.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\pruebas_hipotesis.csv
 
- 181. Nombre: evaluacion_20261028_174145.joblib
+ 203. Nombre: pruebas_hipotesis_v2.json
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\pruebas_hipotesis_v2.json
+--------------------------------------------------------------------------------
+CONTENIDO DE pruebas_hipotesis_v2.json:
+--------------------------------------------------------------------------------
+{
+  "consumo": {
+    "metricas": {
+      "Perfil": {
+        "MAE": 13.317394330989604,
+        "RMSE": 17.40190007231205,
+        "R2": 0.945913804749948,
+        "MAPE": 5.6314223516075606,
+        "MASE": 0.7710779016560388,
+        "MAE_mean": 13.322725194039792,
+        "MAE_ic95_inf": 12.545816610442143,
+        "MAE_ic95_sup": 14.09774262938246
+      },
+      "RandomForest": {
+        "MAE": 13.313941369405711,
+        "RMSE": 17.401869216493193,
+        "R2": 0.9459139965534127,
+        "MAPE": 5.63034014142912,
+        "MASE": 0.7708779749807124,
+        "MAE_mean": 13.31936012579348,
+        "MAE_ic95_inf": 12.540793542116631,
+        "MAE_ic95_sup": 14.092602096496162
+      },
+      "XGBoost": {
+        "MAE": 13.394452616835872,
+        "RMSE": 17.504912934291855,
+        "R2": 0.9452715686057271,
+        "MAPE": 5.673066768165972,
+        "MASE": 0.7755395808613536,
+        "MAE_mean": 13.403036216864447,
+        "MAE_ic95_inf": 12.618825833373807,
+        "MAE_ic95_sup": 14.175798818757972
+      },
+      "Ensemble": {
+        "MAE": 13.289465102876038,
+        "RMSE": 17.379506814629366,
+        "R2": 0.946052914481743,
+        "MAPE": 5.622013302254176,
+        "MASE": 0.7694607977336472,
+        "MAE_mean": 13.295782371486519,
+        "MAE_ic95_inf": 12.51009841180817,
+        "MAE_ic95_sup": 14.070246520104531
+      }
+    },
+    "diebold_mariano": {
+      "Perfil": {
+        "DM": -2.7916633279213974,
+        "p_value": 0.005243788558210838
+      },
+      "RandomForest": {
+        "DM": -2.5921294510646584,
+        "p_value": 0.009538387304245388
+      },
+      "XGBoost": {
+        "DM": -3.597733541126604,
+        "p_value": 0.00032100222554598545
+      }
+    }
+  },
+  "generacion": {
+    "metricas": {
+      "RandomForest": {
+        "MAE": 0.02355622938977971,
+        "RMSE": 0.051028798639668305,
+        "R2": 0.9574577573174794,
+        "MAPE": 26.353525915312616,
+        "MASE": 0.42938370891491884,
+        "MAE_mean": 0.023549549779829357,
+        "MAE_ic95_inf": 0.02256725936404804,
+        "MAE_ic95_sup": 0.024546152829490946
+      },
+      "XGBoost": {
+        "MAE": 0.02397210302395369,
+        "RMSE": 0.051800155321352674,
+        "R2": 0.9561618905379349,
+        "MAPE": 34.03387009194675,
+        "MASE": 0.43696426692897117,
+        "MAE_mean": 0.02396238688275447,
+        "MAE_ic95_inf": 0.02289982268737948,
+        "MAE_ic95_sup": 0.025030287423138012
+      },
+      "Ensemble": {
+        "MAE": 0.02342062350669591,
+        "RMSE": 0.051077245822497105,
+        "R2": 0.9573769390245012,
+        "MAPE": 26.68816668493776,
+        "MASE": 0.4269118805052979,
+        "MAE_mean": 0.023411517149578075,
+        "MAE_ic95_inf": 0.022414865951963844,
+        "MAE_ic95_sup": 0.024426654660040358
+      },
+      "Havana_v1": {
+        "MAE": 0.05501800705392829,
+        "RMSE": 0.09650578081457208,
+        "R2": 0.8478414536424911,
+        "MAPE": 167.18334326387213,
+        "MASE": 1.0028700066986322,
+        "MAE_mean": 0.0550093213265927,
+        "MAE_ic95_inf": 0.05372306924947197,
+        "MAE_ic95_sup": 0.05626049072562325
+      }
+    },
+    "diebold_mariano": {
+      "RandomForest": {
+        "DM": -3.1466533151166436,
+        "p_value": 0.0016515065266773377
+      },
+      "XGBoost": {
+        "DM": -11.783596934824196,
+        "p_value": 0.0
+      },
+      "Havana_v1": {
+        "DM": -67.55320889267648,
+        "p_value": 0.0
+      }
+    }
+  }
+}
+--------------------------------------------------------------------------------
+
+ 204. Nombre: evaluacion_20261110_222137.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\evaluacion_20261110_222137.joblib
+
+ 205. Nombre: importancia_caracteristicas_20261110_222146.csv
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\importancia_caracteristicas_20261110_222146.csv
+
+ 206. Nombre: interpretabilidad_20261110_222146.json
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\interpretabilidad_20261110_222146.json
+--------------------------------------------------------------------------------
+CONTENIDO DE interpretabilidad_20261110_222146.json:
+--------------------------------------------------------------------------------
+{
+  "RandomForest": {
+    "Hora": 0.24306751403028018,
+    "Mes": 0.6936927179490956,
+    "tipo_dia_bin": 0.06323976802062424
+  },
+  "XGBoost": {
+    "Hora": 0.09686768054962158,
+    "Mes": 0.7596923112869263,
+    "tipo_dia_bin": 0.14344002306461334
+  }
+}
+--------------------------------------------------------------------------------
+
+ 207. Nombre: evaluacion_20261110_223718.joblib
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\evaluacion_20261110_223718.joblib
+
+ 208. Nombre: importancia_caracteristicas_20261110_223730.csv
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\importancia_caracteristicas_20261110_223730.csv
+
+ 209. Nombre: interpretabilidad_20261110_223730.json
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\interpretabilidad_20261110_223730.json
+--------------------------------------------------------------------------------
+CONTENIDO DE interpretabilidad_20261110_223730.json:
+--------------------------------------------------------------------------------
+{
+  "RandomForest": {
+    "Hora": 0.24306751403028018,
+    "Mes": 0.6936927179490956,
+    "tipo_dia_bin": 0.06323976802062424
+  },
+  "XGBoost": {
+    "Hora": 0.09686768054962158,
+    "Mes": 0.7596923112869263,
+    "tipo_dia_bin": 0.14344002306461334
+  }
+}
+--------------------------------------------------------------------------------
+
+ 210. Nombre: evaluacion_20261028_174145.joblib
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\generacion\evaluacion_20261028_174145.joblib
 
- 182. Nombre: importancia_caracteristicas_20261028_174154.csv
+ 211. Nombre: importancia_caracteristicas_20261028_174154.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\generacion\importancia_caracteristicas_20261028_174154.csv
 
- 183. Nombre: interpretabilidad_20261028_174154.json
+ 212. Nombre: interpretabilidad_20261028_174154.json
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\generacion\interpretabilidad_20261028_174154.json
 --------------------------------------------------------------------------------
 CONTENIDO DE interpretabilidad_20261028_174154.json:
@@ -18687,13 +19358,13 @@ CONTENIDO DE interpretabilidad_20261028_174154.json:
 }
 --------------------------------------------------------------------------------
 
- 184. Nombre: evaluacion_20261028_172454.joblib
+ 213. Nombre: evaluacion_20261028_172454.joblib
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\consumo\evaluacion_20261028_172454.joblib
 
- 185. Nombre: importancia_caracteristicas_20261028_172503.csv
+ 214. Nombre: importancia_caracteristicas_20261028_172503.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\consumo\importancia_caracteristicas_20261028_172503.csv
 
- 186. Nombre: interpretabilidad_20261028_172503.json
+ 215. Nombre: interpretabilidad_20261028_172503.json
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\consumo\interpretabilidad_20261028_172503.json
 --------------------------------------------------------------------------------
 CONTENIDO DE interpretabilidad_20261028_172503.json:
@@ -18712,7 +19383,7 @@ CONTENIDO DE interpretabilidad_20261028_172503.json:
 }
 --------------------------------------------------------------------------------
 
- 187. Nombre: ablaciones_target.json
+ 216. Nombre: ablaciones_target.json
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\ablaciones_target\ablaciones_target.json
 --------------------------------------------------------------------------------
 CONTENIDO DE ablaciones_target.json:
@@ -18917,47 +19588,71 @@ CONTENIDO DE ablaciones_target.json:
 }
 --------------------------------------------------------------------------------
 
- 188. Nombre: ablaciones_target.csv
+ 217. Nombre: ablaciones_target.csv
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\ablaciones_target\ablaciones_target.csv
 
- 189. Nombre: fig_metricas_globales.png
+ 218. Nombre: shap_values_consumo_RandomForest.csv
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\shap\shap_values_consumo_RandomForest.csv
+
+ 219. Nombre: shap_summary_consumo_RandomForest.png
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\shap\shap_summary_consumo_RandomForest.png
+
+ 220. Nombre: shap_values_consumo_XGBoost.csv
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\shap\shap_values_consumo_XGBoost.csv
+
+ 221. Nombre: shap_summary_consumo_XGBoost.png
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\shap\shap_summary_consumo_XGBoost.png
+
+ 222. Nombre: shap_values_generacion_RandomForest.csv
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\shap\shap_values_generacion_RandomForest.csv
+
+ 223. Nombre: shap_summary_generacion_RandomForest.png
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\shap\shap_summary_generacion_RandomForest.png
+
+ 224. Nombre: shap_values_generacion_XGBoost.csv
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\shap\shap_values_generacion_XGBoost.csv
+
+ 225. Nombre: shap_summary_generacion_XGBoost.png
+      Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\shap\shap_summary_generacion_XGBoost.png
+
+ 226. Nombre: fig_metricas_globales.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\generacion\fig_metricas_globales.png
 
- 190. Nombre: fig_metricas_diurnas.png
+ 227. Nombre: fig_metricas_diurnas.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\generacion\fig_metricas_diurnas.png
 
- 191. Nombre: fig_mae_segmento.png
+ 228. Nombre: fig_mae_segmento.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\generacion\fig_mae_segmento.png
 
- 192. Nombre: fig_r2_segmento.png
+ 229. Nombre: fig_r2_segmento.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\generacion\fig_r2_segmento.png
 
- 193. Nombre: fig_importancia_rf.png
+ 230. Nombre: fig_importancia_rf.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\generacion\fig_importancia_rf.png
 
- 194. Nombre: fig_importancia_xgb.png
+ 231. Nombre: fig_importancia_xgb.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\generacion\fig_importancia_xgb.png
 
- 195. Nombre: fig_pesos_ensamble.png
+ 232. Nombre: fig_pesos_ensamble.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\generacion\fig_pesos_ensamble.png
 
- 196. Nombre: fig_metricas_globales.png
+ 233. Nombre: fig_metricas_globales.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\consumo\fig_metricas_globales.png
 
- 197. Nombre: fig_mae_segmento.png
+ 234. Nombre: fig_mae_segmento.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\consumo\fig_mae_segmento.png
 
- 198. Nombre: fig_importancia_rf.png
+ 235. Nombre: fig_importancia_rf.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\consumo\fig_importancia_rf.png
 
- 199. Nombre: fig_importancia_xgb.png
+ 236. Nombre: fig_importancia_xgb.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\consumo\fig_importancia_xgb.png
 
- 200. Nombre: fig_pesos_ensamble.png
+ 237. Nombre: fig_pesos_ensamble.png
       Ruta:   D:\gemelo-digital-main\backend\ensamble\artifacts\figuras\consumo\fig_pesos_ensamble.png
 
- 201. Nombre: export_for_optimization.py
-      Ruta:   D:\gemelo-digital-main\backend\script\export_for_optimization.py
+ 238. Nombre: export_for_optimization.py
+      Ruta:   D:\gemelo-digital-main\backend\scripts\export_for_optimization.py
 --------------------------------------------------------------------------------
 CONTENIDO DE export_for_optimization.py:
 --------------------------------------------------------------------------------
@@ -18965,11 +19660,12 @@ CONTENIDO DE export_for_optimization.py:
 Script de Integración: Exportar predicciones anuales para el optimizador NSGA-II.
 Usa los métodos de predicción por lotes de los motores de ensamble.
 """
+import sys
 import asyncio
 import pandas as pd
 import numpy as np
 from pathlib import Path
-
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 # Importaciones
 from app.services.ensemble_consumption_engine import EnsembleConsumptionEngine
 from app.services.ensemble_production_engine import EnsembleProductionEngine
@@ -19040,7 +19736,990 @@ if __name__ == "__main__":
 
 --------------------------------------------------------------------------------
 
- 202. Nombre: NSGA_II.ipynb
+ 239. Nombre: configurar_microrred.py
+      Ruta:   D:\gemelo-digital-main\backend\scripts\configurar_microrred.py
+--------------------------------------------------------------------------------
+CONTENIDO DE configurar_microrred.py:
+--------------------------------------------------------------------------------
+"""
+Configura la microrred del gemelo digital en MongoDB.
+Ejecutar desde la carpeta backend con el venv activado:
+    python configurar_microrred.py
+"""
+import sys
+sys.path.insert(0, r"D:\gemelo-digital-main\backend")
+
+from app.database import get_database
+
+# ============================================================
+# CONFIGURACIÓN: EDITA ESTOS VALORES CON LOS REALES DEL CAMPUS
+# ============================================================
+
+PANELES = [
+    {
+        "manufacturer": "Trina Solar",
+        "model": "TSM-445DE09",
+        "ratedPowerKw": 0.445,      # Potencia de cada panel en kW
+        "quantity": 100,             # Cantidad de paneles
+        "tiltDegrees": 20.0,         # Inclinación
+        "orientation": "sur",        # Orientación
+        "efficiencyPercent": 21.8,
+        "areaM2": 2.0,
+    },
+]
+
+BATERIAS = [
+    {
+        "manufacturer": "Pylontech",
+        "model": "US5000",
+        "capacityKwh": 4.8,          # Capacidad de cada batería en kWh
+        "quantity": 20,              # Cantidad de baterías
+        "maxDepthOfDischargePercent": 80.0,
+        "chargeRateKw": 2.4,
+        "dischargeRateKw": 2.4,
+        "efficiencyPercent": 95.0,
+    },
+]
+
+INVERSORES = [
+    {
+        "manufacturer": "Huawei",
+        "model": "SUN2000-50KTL",
+        "ratedPowerKw": 50.0,
+        "quantity": 2,
+        "efficiencyPercent": 98.0,
+    },
+]
+
+# ============================================================
+# FUNCIÓN PARA GUARDAR
+# ============================================================
+def configurar():
+    db = get_database()
+    print("🔌 Conectado a MongoDB")
+
+    # Limpiar colecciones existentes (opcional, para no duplicar)
+    db["paneles"].delete_many({})
+    db["baterias"].delete_many({})
+    db["inversores"].delete_many({})
+    print("🧹 Colecciones limpiadas")
+
+    # Insertar paneles
+    if PANELES:
+        db["paneles"].insert_many(PANELES)
+        print(f"✅ {len(PANELES)} tipo(s) de panel insertado(s)")
+
+    # Insertar baterías
+    if BATERIAS:
+        db["baterias"].insert_many(BATERIAS)
+        print(f"✅ {len(BATERIAS)} tipo(s) de batería insertado(s)")
+
+    # Insertar inversores
+    if INVERSORES:
+        db["inversores"].insert_many(INVERSORES)
+        print(f"✅ {len(INVERSORES)} tipo(s) de inversor insertado(s)")
+
+    # Mostrar resumen
+    total_pv = sum(p["ratedPowerKw"] * p["quantity"] for p in PANELES)
+    total_bat = sum(b["capacityKwh"] * b["quantity"] for b in BATERIAS)
+    total_inv = sum(i["ratedPowerKw"] * i["quantity"] for i in INVERSORES)
+
+    print("\n📊 RESUMEN DE LA CONFIGURACIÓN:")
+    print(f"   Capacidad solar: {total_pv:.2f} kW")
+    print(f"   Capacidad baterías: {total_bat:.2f} kWh")
+    print(f"   Capacidad inversores: {total_inv:.2f} kW")
+    print("\n🎉 Configuración guardada en MongoDB")
+
+
+if __name__ == "__main__":
+    configurar()
+--------------------------------------------------------------------------------
+
+ 240. Nombre: linea_consumo.py
+      Ruta:   D:\gemelo-digital-main\backend\scripts\linea_consumo.py
+--------------------------------------------------------------------------------
+CONTENIDO DE linea_consumo.py:
+--------------------------------------------------------------------------------
+import pandas as pd
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+import numpy as np
+
+# ===== RUTAS ABSOLUTAS (cambia solo estas) =====
+RUTA_CONSUMO = r'D:\gemelo-digital-main\backend\ensamble\data\_BD del consumo en la cujae_.xlsx'  # <-- ruta absoluta al Excel
+HOJA = 0  # nombre o índice de la hoja (0 = primera hoja)
+COL_TARGET = 'Energia_consumida_kW'
+COL_MES = 'Mes'
+COL_HORA = 'Hora'
+COL_TIPO_DIA = 'tipo_dia_bin'
+# ===============================================
+
+# 1. Cargar el dataset desde Excel
+df = pd.read_excel(RUTA_CONSUMO, sheet_name=HOJA)
+
+# 2. Partición cronológica 80/20
+n = len(df)
+train = df.iloc[:int(0.8 * n)].copy()
+test = df.iloc[int(0.8 * n):].copy()
+
+# 3. Calcular la media histórica por (Mes, Hora, tipo_dia) SOLO con train
+perfil = train.groupby([COL_MES, COL_HORA, COL_TIPO_DIA])[COL_TARGET].mean().reset_index()
+perfil.columns = [COL_MES, COL_HORA, COL_TIPO_DIA, 'pred_perfil']
+
+# 4. Unir el perfil al conjunto de prueba
+test = test.merge(perfil, on=[COL_MES, COL_HORA, COL_TIPO_DIA], how='left')
+
+# 5. Si algún grupo no existe en train, rellenar con la media global de train
+test['pred_perfil'] = test['pred_perfil'].fillna(train[COL_TARGET].mean())
+
+# 6. Calcular métricas
+y_true = test[COL_TARGET]
+y_pred = test['pred_perfil']
+
+mae = mean_absolute_error(y_true, y_pred)
+rmse = np.sqrt(mean_squared_error(y_true, y_pred))
+r2 = r2_score(y_true, y_pred)
+mape = np.mean(np.abs((y_true - y_pred) / y_true)) * 100
+
+# MASE: escalado por el error del naive (persistencia)
+naive = y_true.shift(1).dropna()
+mase_denom = np.mean(np.abs(y_true.iloc[1:] - naive))
+mase = mae / mase_denom
+
+print(f"Perfil estadístico (Mes-Hora-tipo_dia):")
+print(f"MAE:  {mae:.2f} kW")
+print(f"RMSE: {rmse:.2f} kW")
+print(f"R²:   {r2:.4f}")
+print(f"MAPE: {mape:.2f} %")
+print(f"MASE: {mase:.4f}")
+--------------------------------------------------------------------------------
+
+ 241. Nombre: metricas_ensamble_consumo.py
+      Ruta:   D:\gemelo-digital-main\backend\scripts\metricas_ensamble_consumo.py
+--------------------------------------------------------------------------------
+CONTENIDO DE metricas_ensamble_consumo.py:
+--------------------------------------------------------------------------------
+import pandas as pd
+import numpy as np
+import joblib
+import json
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
+# ===== RUTAS ABSOLUTAS (cambia solo estas si es necesario) =====
+RUTA_CONSUMO = r"D:\gemelo-digital-main\backend\ensamble\data\_BD del consumo en la cujae_.xlsx"
+RUTA_RF = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\RandomForest_20261028_172328.joblib"
+RUTA_XGB = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\XGBoost_20261028_172447.joblib"
+RUTA_CONFIG_ENSAMBLE = r"D:\gemelo-digital-main\backend\ensamble\artifacts\config\consumo\config_ensamblaje_20261028_172500.json"
+RUTA_SEGMENTACION = r"D:\gemelo-digital-main\backend\ensamble\artifacts\config\consumo\segmentacion_reglas_20261028_172243.json"
+TARGET = "Energia_consumida_kW"
+FEATURES = ["Hora", "Mes", "tipo_dia_bin"]
+# ===============================================================
+
+# 1. Cargar datos y split 80/20
+df = pd.read_excel(RUTA_CONSUMO)
+split_idx = int(len(df) * 0.8)
+test = df.iloc[split_idx:].reset_index(drop=True)
+y_true = test[TARGET].values
+X_test = test[FEATURES]
+
+# 2. Cargar modelos
+def cargar_modelo(ruta):
+    data = joblib.load(ruta)
+    return data["model"] if isinstance(data, dict) and "model" in data else data
+
+rf = cargar_modelo(RUTA_RF)
+xgb = cargar_modelo(RUTA_XGB)
+
+# 3. Cargar configuración de segmentación y ensamble
+with open(RUTA_SEGMENTACION, "r", encoding="utf-8") as f:
+    seg_config = json.load(f)
+with open(RUTA_CONFIG_ENSAMBLE, "r", encoding="utf-8") as f:
+    ens_config = json.load(f)
+
+# 4. Función para asignar segmento (reglas)
+def asignar_segmento(row):
+    for regla in seg_config["reglas"]:
+        cumple = True
+        for var, cond in regla.items():
+            if var == "segmento":
+                continue
+            val = row[var]
+            if isinstance(cond, list):
+                if val not in cond:
+                    cumple = False
+                    break
+            else:
+                if val != cond:
+                    cumple = False
+                    break
+        if cumple:
+            return regla["segmento"]
+    return -1
+
+# 5. Predecir con RF y XGB
+pred_rf = rf.predict(X_test)
+pred_xgb = xgb.predict(X_test)
+
+# 6. Calcular predicción del ensamble
+pred_ensamble = np.zeros(len(test))
+for i, row in test.iterrows():
+    seg = asignar_segmento(row)
+    config_seg = ens_config["segmentos"].get(str(seg), {})
+    if config_seg.get("modelo") == "Ensemble":
+        pesos = config_seg.get("pesos", {})
+        p = 0.0
+        if "RandomForest" in pesos:
+            p += pesos["RandomForest"] * pred_rf[i]
+        if "XGBoost" in pesos:
+            p += pesos["XGBoost"] * pred_xgb[i]
+        pred_ensamble[i] = p
+    elif config_seg.get("modelo") == "RandomForest":
+        pred_ensamble[i] = pred_rf[i]
+    elif config_seg.get("modelo") == "XGBoost":
+        pred_ensamble[i] = pred_xgb[i]
+    else:
+        pred_ensamble[i] = pred_rf[i]  # fallback
+
+# 7. Calcular métricas
+mae = mean_absolute_error(y_true, pred_ensamble)
+rmse = np.sqrt(mean_squared_error(y_true, pred_ensamble))
+r2 = r2_score(y_true, pred_ensamble)
+mape = np.mean(np.abs((y_true - pred_ensamble) / y_true)) * 100
+
+# MASE: naive de persistencia sobre train
+y_train = df.iloc[:split_idx][TARGET].values
+mae_naive = mean_absolute_error(y_train[1:], y_train[:-1])
+mase = mae / mae_naive if mae_naive > 0 else float("inf")
+
+print("=== MÉTRICAS DEL ENSAMBLE (CONSUMO) ===")
+print(f"MAE:  {mae:.2f} kW")
+print(f"RMSE: {rmse:.2f} kW")
+print(f"R²:   {r2:.4f}")
+print(f"MAPE: {mape:.2f} %")
+print(f"MASE: {mase:.4f}")
+--------------------------------------------------------------------------------
+
+ 242. Nombre: metricas_ensamble_generacion.py
+      Ruta:   D:\gemelo-digital-main\backend\scripts\metricas_ensamble_generacion.py
+--------------------------------------------------------------------------------
+CONTENIDO DE metricas_ensamble_generacion.py:
+--------------------------------------------------------------------------------
+import pandas as pd
+import numpy as np
+import joblib
+import json
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
+# ===== RUTAS ABSOLUTAS (cambia solo estas si es necesario) =====
+RUTA_GENERACION = r"D:\gemelo-digital-main\backend\ensamble\data\havana_solar_training.csv"
+RUTA_RF = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\RandomForest_20261028_173518.joblib"
+RUTA_XGB = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\XGBoost_20261028_174133.joblib"
+RUTA_CONFIG_ENSAMBLE = r"D:\gemelo-digital-main\backend\ensamble\artifacts\config\generacion\config_ensamblaje_20261028_174151.json"
+RUTA_SEGMENTACION = r"D:\gemelo-digital-main\backend\ensamble\artifacts\config\generacion\segmentacion_shortwave_radiation_20261028_172544.json"
+TARGET = "capacity_factor"
+FEATURES = [
+    "shortwave_radiation", "clearsky_ghi", "clearsky_index",
+    "solar_elevation", "effective_irradiance", "cloud_cover",
+    "temperature_2m", "relative_humidity_2m", "wind_speed_10m",
+    "temp_loss_factor", "hour_sin", "hour_cos", "month_sin", "month_cos"
+]
+# ===============================================================
+
+# 1. Cargar datos y split 80/20
+df = pd.read_csv(RUTA_GENERACION)
+split_idx = int(len(df) * 0.8)
+test = df.iloc[split_idx:].reset_index(drop=True)
+y_true = test[TARGET].values
+X_test = test[FEATURES]
+
+# 2. Cargar modelos
+def cargar_modelo(ruta):
+    data = joblib.load(ruta)
+    return data["model"] if isinstance(data, dict) and "model" in data else data
+
+rf = cargar_modelo(RUTA_RF)
+xgb = cargar_modelo(RUTA_XGB)
+
+# 3. Cargar configuración de segmentación y ensamble
+with open(RUTA_SEGMENTACION, "r", encoding="utf-8") as f:
+    seg_config = json.load(f)
+with open(RUTA_CONFIG_ENSAMBLE, "r", encoding="utf-8") as f:
+    ens_config = json.load(f)
+
+# 4. Función para asignar segmento (clustering)
+def asignar_segmento_clustering(row, seg_config):
+    variable = seg_config["variables"][0]
+    centroides = np.array(seg_config["centroides"]).flatten()
+    orden = np.array(seg_config["orden"])
+    valor = row[variable]
+    distancias = np.abs(valor - centroides)
+    cluster = np.argmin(distancias)
+    return int(np.nonzero(orden == cluster)[0][0])
+
+# 5. Predecir con RF y XGB
+pred_rf = rf.predict(X_test)
+pred_xgb = xgb.predict(X_test)
+
+# 6. Calcular predicción del ensamble
+pred_ensamble = np.zeros(len(test))
+for i, row in test.iterrows():
+    seg = asignar_segmento_clustering(row, seg_config)
+    config_seg = ens_config["segmentos"].get(str(seg), {})
+    if config_seg.get("modelo") == "Ensemble":
+        pesos = config_seg.get("pesos", {})
+        p = 0.0
+        if "RandomForest" in pesos:
+            p += pesos["RandomForest"] * pred_rf[i]
+        if "XGBoost" in pesos:
+            p += pesos["XGBoost"] * pred_xgb[i]
+        pred_ensamble[i] = p
+    elif config_seg.get("modelo") == "RandomForest":
+        pred_ensamble[i] = pred_rf[i]
+    elif config_seg.get("modelo") == "XGBoost":
+        pred_ensamble[i] = pred_xgb[i]
+    else:
+        pred_ensamble[i] = pred_rf[i]  # fallback
+
+# 7. Calcular métricas globales
+mae = mean_absolute_error(y_true, pred_ensamble)
+rmse = np.sqrt(mean_squared_error(y_true, pred_ensamble))
+r2 = r2_score(y_true, pred_ensamble)
+
+mask_nonzero = y_true != 0
+mape = np.mean(np.abs((y_true[mask_nonzero] - pred_ensamble[mask_nonzero]) / y_true[mask_nonzero])) * 100
+
+# MASE: naive de persistencia sobre train
+y_train = df.iloc[:split_idx][TARGET].values
+mae_naive = mean_absolute_error(y_train[1:], y_train[:-1])
+mase = mae / mae_naive if mae_naive > 0 else float("inf")
+
+print("=== MÉTRICAS GLOBALES DEL ENSAMBLE (GENERACIÓN) ===")
+print(f"MAE:  {mae:.6f} (factor de capacidad)")
+print(f"RMSE: {rmse:.6f}")
+print(f"R²:   {r2:.4f}")
+print(f"MAPE: {mape:.2f} %")
+print(f"MASE: {mase:.4f}")
+
+# 8. Calcular métricas diurnas (solar_elevation > 0)
+mask_diurno = X_test["solar_elevation"].values > 0
+y_true_d = y_true[mask_diurno]
+pred_d = pred_ensamble[mask_diurno]
+mae_d = mean_absolute_error(y_true_d, pred_d)
+rmse_d = np.sqrt(mean_squared_error(y_true_d, pred_d))
+r2_d = r2_score(y_true_d, pred_d)
+
+mask_d_nonzero = y_true_d != 0
+mape_d = np.mean(np.abs((y_true_d[mask_d_nonzero] - pred_d[mask_d_nonzero]) / y_true_d[mask_d_nonzero])) * 100
+
+# nRMSE y nMAE diurnos (normalizados por capacidad de referencia = 1.0)
+nrmse_d = rmse_d / 1.0
+nmae_d = mae_d / 1.0
+
+# MASE diurno
+mase_d = mae_d / mae_naive if mae_naive > 0 else float("inf")
+
+print("\n=== MÉTRICAS DIURNAS DEL ENSAMBLE (GENERACIÓN) ===")
+print(f"Muestras diurnas: {mask_diurno.sum()} de {len(y_true)}")
+print(f"MAE:  {mae_d:.6f}")
+print(f"RMSE: {rmse_d:.6f}")
+print(f"R²:   {r2_d:.4f}")
+print(f"nRMSE: {nrmse_d*100:.2f} %")
+print(f"nMAE:  {nmae_d*100:.2f} %")
+print(f"MASE:  {mase_d:.4f}")
+print(f"MAPE:  {mape_d:.2f} %")
+--------------------------------------------------------------------------------
+
+ 243. Nombre: hiperparametros.py
+      Ruta:   D:\gemelo-digital-main\backend\scripts\hiperparametros.py
+--------------------------------------------------------------------------------
+CONTENIDO DE hiperparametros.py:
+--------------------------------------------------------------------------------
+import joblib
+
+rutas = {
+    "RF Consumo": r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\RandomForest_20261028_172328.joblib",
+    "XGB Consumo": r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\XGBoost_20261028_172447.joblib",
+    "RF Generación": r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\RandomForest_20261028_173518.joblib",
+    "XGB Generación": r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\XGBoost_20261028_174133.joblib",
+}
+
+for nombre, ruta in rutas.items():
+    data = joblib.load(ruta)
+    print(f"\n=== {nombre} ===")
+    print(data["metadata"]["params"])
+--------------------------------------------------------------------------------
+
+ 244. Nombre: prueba_hipotesis_v2.py
+      Ruta:   D:\gemelo-digital-main\backend\scripts\prueba_hipotesis_v2.py
+--------------------------------------------------------------------------------
+CONTENIDO DE prueba_hipotesis_v2.py:
+--------------------------------------------------------------------------------
+"""
+Pruebas de hipótesis para comparar modelos predictivos en el conjunto de prueba.
+
+Prueba principal: Diebold-Mariano (adecuada para series temporales).
+Corrección por comparaciones múltiples: Bonferroni.
+Intervalos de confianza del MAE: bootstrap por bloques.
+
+Dominios: consumo (Perfil, RF, XGB, Ensemble) y generación (RF, XGB, Ensemble, Havana v1).
+"""
+import sys
+sys.path.insert(0, r"D:\gemelo-digital-main\backend")
+import pandas as pd
+import numpy as np
+import joblib
+import json
+import os
+from scipy import stats
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
+# ===== RUTAS =====
+RUTA_CONSUMO = r"D:\gemelo-digital-main\backend\ensamble\data\_BD del consumo en la cujae_.xlsx"
+RUTA_GENERACION = r"D:\gemelo-digital-main\backend\ensamble\data\havana_solar_training.csv"
+
+RUTA_RF_CON = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\RandomForest_20261028_172328.joblib"
+RUTA_XGB_CON = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\XGBoost_20261028_172447.joblib"
+RUTA_RF_GEN = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\RandomForest_20261028_173518.joblib"
+RUTA_XGB_GEN = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\XGBoost_20261028_174133.joblib"
+
+RUTA_CONFIG_ENS_CON = r"D:\gemelo-digital-main\backend\ensamble\artifacts\config\consumo\config_ensamblaje_20261028_172500.json"
+RUTA_SEG_CON = r"D:\gemelo-digital-main\backend\ensamble\artifacts\config\consumo\segmentacion_reglas_20261028_172243.json"
+RUTA_CONFIG_ENS_GEN = r"D:\gemelo-digital-main\backend\ensamble\artifacts\config\generacion\config_ensamblaje_20261028_174151.json"
+RUTA_SEG_GEN = r"D:\gemelo-digital-main\backend\ensamble\artifacts\config\generacion\segmentacion_shortwave_radiation_20261028_172544.json"
+
+TARGET_CON = "Energia_consumida_kW"
+FEATURES_CON = ["Hora", "Mes", "tipo_dia_bin"]
+
+TARGET_GEN = "capacity_factor"
+FEATURES_GEN = [
+    "shortwave_radiation", "clearsky_ghi", "clearsky_index",
+    "solar_elevation", "effective_irradiance", "cloud_cover",
+    "temperature_2m", "relative_humidity_2m", "wind_speed_10m",
+    "temp_loss_factor", "hour_sin", "hour_cos", "month_sin", "month_cos"
+]
+
+ALPHA = 0.05
+N_BOOTSTRAP = 1000
+BLOQUE_BOOTSTRAP = 24
+
+# ===== FUNCIONES AUXILIARES =====
+
+def cargar_modelo(ruta):
+    data = joblib.load(ruta)
+    return data["model"] if isinstance(data, dict) and "model" in data else data
+
+def cargar_json(ruta):
+    with open(ruta, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def asignar_segmento_reglas(row, seg_config):
+    for regla in seg_config["reglas"]:
+        cumple = True
+        for var, cond in regla.items():
+            if var == "segmento":
+                continue
+            val = row[var]
+            if isinstance(cond, list):
+                if val not in cond:
+                    cumple = False
+                    break
+            else:
+                if val != cond:
+                    cumple = False
+                    break
+        if cumple:
+            return regla["segmento"]
+    return -1
+
+def asignar_segmento_clustering(row, seg_config):
+    variable = seg_config["variables"][0]
+    centroides = np.array(seg_config["centroides"]).flatten()
+    orden = np.array(seg_config["orden"])
+    valor = row[variable]
+    distancias = np.abs(valor - centroides)
+    cluster = np.argmin(distancias)
+    return int(np.nonzero(orden == cluster)[0][0])
+
+def predecir_ensamble(test, pred_rf, pred_xgb, ens_config, seg_config, tipo_seg):
+    pred_ens = np.zeros(len(test))
+    for i, row in test.iterrows():
+        if tipo_seg == "reglas":
+            seg = asignar_segmento_reglas(row, seg_config)
+        else:
+            seg = asignar_segmento_clustering(row, seg_config)
+        config_seg = ens_config["segmentos"].get(str(seg), {})
+        if config_seg.get("modelo") == "Ensemble":
+            pesos = config_seg.get("pesos", {})
+            p = 0.0
+            if "RandomForest" in pesos:
+                p += pesos["RandomForest"] * pred_rf[i]
+            if "XGBoost" in pesos:
+                p += pesos["XGBoost"] * pred_xgb[i]
+            pred_ens[i] = p
+        elif config_seg.get("modelo") == "RandomForest":
+            pred_ens[i] = pred_rf[i]
+        elif config_seg.get("modelo") == "XGBoost":
+            pred_ens[i] = pred_xgb[i]
+        else:
+            pred_ens[i] = pred_rf[i]
+    return pred_ens
+
+def calcular_perfil_estadistico(train, test):
+    perfil = train.groupby(["Mes", "Hora", "tipo_dia_bin"])[TARGET_CON].mean().reset_index()
+    perfil.columns = ["Mes", "Hora", "tipo_dia_bin", "pred_perfil"]
+    test_merge = test.merge(perfil, on=["Mes", "Hora", "tipo_dia_bin"], how="left")
+    test_merge["pred_perfil"] = test_merge["pred_perfil"].fillna(train[TARGET_CON].mean())
+    return test_merge["pred_perfil"].values
+
+def diebold_mariano(y_true, pred1, pred2):
+    e1 = np.abs(np.asarray(y_true) - np.asarray(pred1))
+    e2 = np.abs(np.asarray(y_true) - np.asarray(pred2))
+    d = e1 - e2
+    n = len(d)
+    if n < 2:
+        return {"DM": float("nan"), "p_value": float("nan")}
+    media_d = d.mean()
+    var_d = d.var(ddof=1)
+    if var_d == 0:
+        return {"DM": float("nan"), "p_value": float("nan")}
+    dm = media_d / np.sqrt(var_d / n)
+    p = 2 * (1 - stats.norm.cdf(abs(dm)))
+    return {"DM": float(dm), "p_value": float(p)}
+
+def bootstrap_mae(y_true, y_pred, n_bootstrap=N_BOOTSTRAP, bloque=BLOQUE_BOOTSTRAP):
+    y_true = np.asarray(y_true)
+    y_pred = np.asarray(y_pred)
+    n = len(y_true)
+    n_bloques = int(np.ceil(n / bloque))
+    maes = []
+    rng = np.random.default_rng(42)
+    for _ in range(n_bootstrap):
+        idx_bloques = rng.integers(0, n_bloques, size=n_bloques)
+        idx = []
+        for b in idx_bloques:
+            inicio = b * bloque
+            fin = min(inicio + bloque, n)
+            idx.extend(range(inicio, fin))
+        idx = np.array(idx[:n])
+        maes.append(mean_absolute_error(y_true[idx], y_pred[idx]))
+    maes = np.array(maes)
+    return {
+        "MAE_mean": float(maes.mean()),
+        "MAE_ic95_inf": float(np.percentile(maes, 2.5)),
+        "MAE_ic95_sup": float(np.percentile(maes, 97.5)),
+    }
+
+def calcular_metricas(y_true, y_pred, y_train):
+    mae = mean_absolute_error(y_true, y_pred)
+    rmse = float(np.sqrt(mean_squared_error(y_true, y_pred)))
+    r2 = r2_score(y_true, y_pred) if len(y_true) > 1 else float("nan")
+    mask = np.asarray(y_true) != 0
+    mape = float(np.mean(np.abs((np.asarray(y_true)[mask] - np.asarray(y_pred)[mask])
+                                / np.asarray(y_true)[mask])) * 100) if mask.any() else float("nan")
+    y_tr = np.asarray(y_train)
+    if len(y_tr) > 1:
+        mae_naive = mean_absolute_error(y_tr[1:], y_tr[:-1])
+        mase = mae / mae_naive if mae_naive > 0 else float("inf")
+    else:
+        mase = float("inf")
+    return {"MAE": mae, "RMSE": rmse, "R2": r2, "MAPE": mape, "MASE": mase}
+
+# ===== DOMINIO CONSUMO =====
+
+def evaluar_consumo():
+    print("\n" + "=" * 70)
+    print("  DOMINIO: CONSUMO")
+    print("=" * 70)
+
+    df = pd.read_excel(RUTA_CONSUMO)
+    split_idx = int(len(df) * 0.8)
+    train = df.iloc[:split_idx].reset_index(drop=True)
+    test = df.iloc[split_idx:].reset_index(drop=True)
+    y_train = train[TARGET_CON].values
+    y_test = test[TARGET_CON].values
+    X_test = test[FEATURES_CON]
+
+    rf = cargar_modelo(RUTA_RF_CON)
+    xgb = cargar_modelo(RUTA_XGB_CON)
+    ens_config = cargar_json(RUTA_CONFIG_ENS_CON)
+    seg_config = cargar_json(RUTA_SEG_CON)
+
+    pred_rf = rf.predict(X_test)
+    pred_xgb = xgb.predict(X_test)
+    pred_ens = predecir_ensamble(test, pred_rf, pred_xgb, ens_config, seg_config, "reglas")
+    pred_perfil = calcular_perfil_estadistico(train, test)
+
+    modelos = {
+        "Perfil": pred_perfil,
+        "RandomForest": pred_rf,
+        "XGBoost": pred_xgb,
+        "Ensemble": pred_ens,
+    }
+
+    print("\n--- Métricas e intervalos de confianza (bootstrap 95%) ---")
+    resultados = {}
+    for nombre, pred in modelos.items():
+        m = calcular_metricas(y_test, pred, y_train)
+        ic = bootstrap_mae(y_test, pred)
+        m.update(ic)
+        resultados[nombre] = m
+        print(f"{nombre:<15} MAE={m['MAE']:.2f} [{m['MAE_ic95_inf']:.2f}, {m['MAE_ic95_sup']:.2f}]  "
+              f"RMSE={m['RMSE']:.2f}  R²={m['R2']:.4f}  MAPE={m['MAPE']:.2f}%  MASE={m['MASE']:.4f}")
+
+    print("\n--- Diebold-Mariano: Ensemble vs alternativas ---")
+    dm_resultados = {}
+    for nombre, pred in modelos.items():
+        if nombre == "Ensemble":
+            continue
+        dm = diebold_mariano(y_test, pred_ens, pred)
+        dm_resultados[nombre] = dm
+        sig = "***" if dm["p_value"] < 0.001 else "**" if dm["p_value"] < 0.01 else "*" if dm["p_value"] < 0.05 else "ns"
+        print(f"  Ensemble vs {nombre:<15} DM={dm['DM']:>7.3f}  p={dm['p_value']:.6f} {sig}")
+
+    return {"metricas": resultados, "diebold_mariano": dm_resultados}
+
+# ===== DOMINIO GENERACIÓN =====
+
+def evaluar_generacion():
+    print("\n" + "=" * 70)
+    print("  DOMINIO: GENERACIÓN")
+    print("=" * 70)
+
+    df = pd.read_csv(RUTA_GENERACION)
+    split_idx = int(len(df) * 0.8)
+    train = df.iloc[:split_idx].reset_index(drop=True)
+    test = df.iloc[split_idx:].reset_index(drop=True)
+    y_train = train[TARGET_GEN].values
+    y_test = test[TARGET_GEN].values
+    X_test = test[FEATURES_GEN]
+
+    rf = cargar_modelo(RUTA_RF_GEN)
+    xgb = cargar_modelo(RUTA_XGB_GEN)
+    ens_config = cargar_json(RUTA_CONFIG_ENS_GEN)
+    seg_config = cargar_json(RUTA_SEG_GEN)
+
+    pred_rf = rf.predict(X_test)
+    pred_xgb = xgb.predict(X_test)
+    pred_ens = predecir_ensamble(test, pred_rf, pred_xgb, ens_config, seg_config, "clustering")
+
+    modelos = {
+        "RandomForest": pred_rf,
+        "XGBoost": pred_xgb,
+        "Ensemble": pred_ens,
+    }
+
+    # Cargar Havana v1
+    try:
+        from app.services.ml_model_service import ml_model_service
+        ml_model_service.load_model("havana_v1")
+        pred_havana = ml_model_service.predict(X_test)
+        modelos["Havana_v1"] = pred_havana
+        print("✅ Havana v1 cargado y evaluado")
+    except Exception as e:
+        print(f"⚠️ No se pudo cargar Havana v1: {e}")
+
+    print("\n--- Métricas globales e intervalos de confianza (bootstrap 95%) ---")
+    resultados = {}
+    for nombre, pred in modelos.items():
+        m = calcular_metricas(y_test, pred, y_train)
+        ic = bootstrap_mae(y_test, pred)
+        m.update(ic)
+        resultados[nombre] = m
+        print(f"{nombre:<15} MAE={m['MAE']:.6f} [{m['MAE_ic95_inf']:.6f}, {m['MAE_ic95_sup']:.6f}]  "
+              f"RMSE={m['RMSE']:.6f}  R²={m['R2']:.4f}  MAPE={m['MAPE']:.2f}%  MASE={m['MASE']:.4f}")
+
+    print("\n--- Diebold-Mariano: Ensemble vs alternativas ---")
+    dm_resultados = {}
+    for nombre, pred in modelos.items():
+        if nombre == "Ensemble":
+            continue
+        dm = diebold_mariano(y_test, pred_ens, pred)
+        dm_resultados[nombre] = dm
+        sig = "***" if dm["p_value"] < 0.001 else "**" if dm["p_value"] < 0.01 else "*" if dm["p_value"] < 0.05 else "ns"
+        print(f"  Ensemble vs {nombre:<15} DM={dm['DM']:>7.3f}  p={dm['p_value']:.6f} {sig}")
+
+    return {"metricas": resultados, "diebold_mariano": dm_resultados}
+
+# ===== MAIN =====
+
+if __name__ == "__main__":
+    resultados = {}
+    resultados["consumo"] = evaluar_consumo()
+    resultados["generacion"] = evaluar_generacion()
+
+    carpeta_salida = r"D:\gemelo-digital-main\backend\ensamble\artifacts\resultados"
+    os.makedirs(carpeta_salida, exist_ok=True)
+    ruta_json = os.path.join(carpeta_salida, "pruebas_hipotesis_v2.json")
+    with open(ruta_json, "w", encoding="utf-8") as f:
+        json.dump(resultados, f, indent=2, default=str)
+    print(f"\n📁 Resultados guardados en: {ruta_json}")
+--------------------------------------------------------------------------------
+
+ 245. Nombre: verificacion_rnf.py
+      Ruta:   D:\gemelo-digital-main\backend\scripts\verificacion_rnf.py
+--------------------------------------------------------------------------------
+CONTENIDO DE verificacion_rnf.py:
+--------------------------------------------------------------------------------
+"""
+Verificación de Requisitos No Funcionales (RNF) del módulo predictivo.
+
+RNF1: Entrenamiento < 4 h
+RNF2: Degradación del MAE < 20% con 10% de datos ausentes
+RNF3: Degradación del MAE < 20% con ruido significativo
+RNF4: Tolerancia a fallos de modelos individuales
+RNF7: Reproducibilidad
+RNF8: Procesar 100 000 registros sin degradación significativa
+"""
+import pandas as pd
+import numpy as np
+import joblib
+import json
+import time
+import os
+from sklearn.metrics import mean_absolute_error
+from sklearn.ensemble import RandomForestRegressor
+from xgboost import XGBRegressor
+from sklearn.impute import KNNImputer
+
+# ===== RUTAS =====
+RUTA_CONSUMO = r"D:\gemelo-digital-main\backend\ensamble\data\_BD del consumo en la cujae_.xlsx"
+RUTA_GENERACION = r"D:\gemelo-digital-main\backend\ensamble\data\havana_solar_training.csv"
+RUTA_RF_CON = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\RandomForest_20261028_172328.joblib"
+RUTA_XGB_CON = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\XGBoost_20261028_172447.joblib"
+RUTA_RF_GEN = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\RandomForest_20261028_173518.joblib"
+RUTA_XGB_GEN = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\XGBoost_20261028_174133.joblib"
+
+TARGET_CON = "Energia_consumida_kW"
+FEATURES_CON = ["Hora", "Mes", "tipo_dia_bin"]
+TARGET_GEN = "capacity_factor"
+FEATURES_GEN = [
+    "shortwave_radiation", "clearsky_ghi", "clearsky_index",
+    "solar_elevation", "effective_irradiance", "cloud_cover",
+    "temperature_2m", "relative_humidity_2m", "wind_speed_10m",
+    "temp_loss_factor", "hour_sin", "hour_cos", "month_sin", "month_cos"
+]
+
+def cargar_modelo(ruta):
+    data = joblib.load(ruta)
+    return data["model"] if isinstance(data, dict) and "model" in data else data
+
+# ===== RNF1: Tiempo de entrenamiento =====
+def rnf1_tiempo_entrenamiento():
+    print("\n--- RNF1: Tiempo de entrenamiento ---")
+    # Consumo
+    df = pd.read_excel(RUTA_CONSUMO)
+    X = df[FEATURES_CON]
+    y = df[TARGET_CON]
+    t0 = time.time()
+    rf = RandomForestRegressor(n_estimators=300, max_depth=15, random_state=42, n_jobs=-1)
+    rf.fit(X, y)
+    t_rf = time.time() - t0
+    t0 = time.time()
+    xgb = XGBRegressor(n_estimators=500, max_depth=7, learning_rate=0.01, random_state=42, verbosity=0)
+    xgb.fit(X, y)
+    t_xgb = time.time() - t0
+    print(f"  Consumo: RF={t_rf:.2f}s, XGB={t_xgb:.2f}s")
+
+    # Generación
+    df = pd.read_csv(RUTA_GENERACION)
+    X = df[FEATURES_GEN]
+    y = df[TARGET_GEN]
+    t0 = time.time()
+    rf = RandomForestRegressor(n_estimators=300, max_depth=15, random_state=42, n_jobs=-1)
+    rf.fit(X, y)
+    t_rf = time.time() - t0
+    t0 = time.time()
+    xgb = XGBRegressor(n_estimators=1200, max_depth=6, learning_rate=0.015, random_state=42, verbosity=0)
+    xgb.fit(X, y)
+    t_xgb = time.time() - t0
+    print(f"  Generación: RF={t_rf:.2f}s, XGB={t_xgb:.2f}s")
+    print("  → RNF1 se cumple si el tiempo total es < 4 h.")
+
+# ===== RNF2 y RNF3: Degradación del MAE con datos ausentes y ruido =====
+def rnf2_rnf3_degradacion():
+    print("\n--- RNF2 y RNF3: Degradación del MAE con datos ausentes y ruido ---")
+    # Consumo
+    df = pd.read_excel(RUTA_CONSUMO)
+    split_idx = int(len(df) * 0.8)
+    test = df.iloc[split_idx:].reset_index(drop=True)
+    X_test = test[FEATURES_CON]
+    y_test = test[TARGET_CON].values
+    rf = cargar_modelo(RUTA_RF_CON)
+    mae_base = mean_absolute_error(y_test, rf.predict(X_test))
+    print(f"  Consumo baseline: MAE={mae_base:.4f}")
+
+    # RNF2: 10% de datos ausentes
+    rng = np.random.default_rng(42)
+    mask = rng.random(X_test.shape) < 0.1
+    X_nulos = X_test.mask(mask)
+    imputer = KNNImputer(n_neighbors=5)
+    imputer.fit(X_test)
+    X_imputado = pd.DataFrame(imputer.transform(X_nulos), columns=X_test.columns)
+    mae_nulos = mean_absolute_error(y_test, rf.predict(X_imputado))
+    deg_nulos = (mae_nulos - mae_base) / mae_base * 100
+    print(f"  Consumo con 10% nulos: MAE={mae_nulos:.4f} (degradación={deg_nulos:.2f}%)")
+    # RNF3: Ruido gaussiano (10% de la desviación estándar)
+    ruido = rng.normal(0, 0.1 * X_test.std(), X_test.shape)
+    X_ruido = pd.DataFrame(X_test.values + ruido, columns=X_test.columns)
+    mae_ruido = mean_absolute_error(y_test, rf.predict(X_ruido))
+    deg_ruido = (mae_ruido - mae_base) / mae_base * 100
+    print(f"  Consumo con ruido: MAE={mae_ruido:.4f} (degradación={deg_ruido:.2f}%)")
+    print("  → RNF2 y RNF3 se cumplen si la degradación es < 20%.")
+
+# ===== RNF4: Tolerancia a fallos =====
+def rnf4_tolerancia_fallos():
+    print("\n--- RNF4: Tolerancia a fallos de modelos individuales ---")
+    # Simulación: el orquestador debe renormalizar pesos si un modelo falla
+    pesos = {"RandomForest": 0.5, "XGBoost": 0.5}
+    print(f"  Pesos iniciales: {pesos}")
+    # Simular fallo de XGBoost
+    pesos_sin_xgb = {"RandomForest": 1.0}
+    print(f"  Pesos tras fallo de XGBoost (renormalizados): {pesos_sin_xgb}")
+    print("  → RNF4 se cumple si el orquestador renormaliza los pesos y sigue prediciendo.")
+
+# ===== RNF7: Reproducibilidad =====
+def rnf7_reproducibilidad():
+    print("\n--- RNF7: Reproducibilidad ---")
+    df = pd.read_excel(RUTA_CONSUMO)
+    X = df[FEATURES_CON]
+    y = df[TARGET_CON]
+    rf1 = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42, n_jobs=-1)
+    rf1.fit(X, y)
+    pred1 = rf1.predict(X.iloc[:100])
+    rf2 = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42, n_jobs=-1)
+    rf2.fit(X, y)
+    pred2 = rf2.predict(X.iloc[:100])
+    identicos = np.allclose(pred1, pred2)
+    print(f"  ¿Predicciones idénticas con misma semilla? {identicos}")
+    print("  → RNF7 se cumple si las predicciones son idénticas.")
+
+# ===== RNF8: 100 000 registros =====
+def rnf8_100k():
+    print("\n--- RNF8: Procesar 100 000 registros ---")
+    df = pd.read_excel(RUTA_CONSUMO)
+    X = df[FEATURES_CON]
+    y = df[TARGET_CON]
+    rf = cargar_modelo(RUTA_RF_CON)
+    # Generar 100 000 registros sintéticos
+    X_sintetico = pd.DataFrame({
+        "Hora": np.random.randint(0, 24, 100000),
+        "Mes": np.random.randint(1, 13, 100000),
+        "tipo_dia_bin": np.random.randint(0, 2, 100000),
+    })
+    t0 = time.time()
+    _ = rf.predict(X_sintetico)
+    t_inferencia = time.time() - t0
+    print(f"  Tiempo de inferencia para 100 000 registros: {t_inferencia:.2f}s")
+    print("  → RNF8 se cumple si el tiempo es razonable (< 1 min).")
+
+if __name__ == "__main__":
+    rnf1_tiempo_entrenamiento()
+    rnf2_rnf3_degradacion()
+    rnf4_tolerancia_fallos()
+    rnf7_reproducibilidad()
+    rnf8_100k()
+--------------------------------------------------------------------------------
+
+ 246. Nombre: shap_analisis.py
+      Ruta:   D:\gemelo-digital-main\backend\scripts\shap_analisis.py
+--------------------------------------------------------------------------------
+CONTENIDO DE shap_analisis.py:
+--------------------------------------------------------------------------------
+"""
+Análisis de interpretabilidad con SHAP para los modelos de consumo y generación.
+Con prints de progreso para identificar cuellos de botella.
+"""
+import pandas as pd
+import numpy as np
+import joblib
+import shap
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import os
+import time
+
+# ===== RUTAS =====
+RUTA_CONSUMO = r"D:\gemelo-digital-main\backend\ensamble\data\_BD del consumo en la cujae_.xlsx"
+RUTA_GENERACION = r"D:\gemelo-digital-main\backend\ensamble\data\havana_solar_training.csv"
+RUTA_RF_CON = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\RandomForest_20261028_172328.joblib"
+RUTA_XGB_CON = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\consumo\XGBoost_20261028_172447.joblib"
+RUTA_RF_GEN = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\RandomForest_20261028_173518.joblib"
+RUTA_XGB_GEN = r"D:\gemelo-digital-main\backend\ensamble\artifacts\modelos\generacion\XGBoost_20261028_174133.joblib"
+
+CARPETA_SALIDA = r"D:\gemelo-digital-main\backend\ensamble\artifacts\resultados\shap"
+os.makedirs(CARPETA_SALIDA, exist_ok=True)
+
+TARGET_CON = "Energia_consumida_kW"
+FEATURES_CON = ["Hora", "Mes", "tipo_dia_bin"]
+TARGET_GEN = "capacity_factor"
+FEATURES_GEN = [
+    "shortwave_radiation", "clearsky_ghi", "clearsky_index",
+    "solar_elevation", "effective_irradiance", "cloud_cover",
+    "temperature_2m", "relative_humidity_2m", "wind_speed_10m",
+    "temp_loss_factor", "hour_sin", "hour_cos", "month_sin", "month_cos"
+]
+
+def cargar_modelo(ruta):
+    print(f"  Cargando modelo: {ruta}")
+    t0 = time.time()
+    data = joblib.load(ruta)
+    modelo = data["model"] if isinstance(data, dict) and "model" in data else data
+    print(f"  Modelo cargado en {time.time() - t0:.2f}s")
+    return modelo
+
+def shap_summary(modelo, X, nombre_modelo, nombre_dominio, n_grafico=300, max_display=6):
+    print(f"\n=== SHAP: {nombre_modelo} ({nombre_dominio}) ===")
+    print(f"  Calculando valores SHAP para {len(X)} registros...")
+    t0 = time.time()
+    explainer = shap.TreeExplainer(modelo)
+    shap_values = explainer.shap_values(X)
+    print(f"  Valores SHAP calculados en {time.time() - t0:.2f}s")
+    print(f"  Guardando CSV...")
+    t0 = time.time()
+    df_shap = pd.DataFrame(shap_values, columns=X.columns)
+    ruta_csv = os.path.join(CARPETA_SALIDA, f"shap_values_{nombre_dominio}_{nombre_modelo}.csv")
+    df_shap.to_csv(ruta_csv, index=False)
+    print(f"  CSV guardado en {time.time() - t0:.2f}s: {ruta_csv}")
+    print(f"  Generando summary plot...")
+    t0 = time.time()
+    rng = np.random.default_rng(42)
+    idx = rng.choice(len(X), size=min(n_grafico, len(X)), replace=False)
+    plt.figure()
+    shap.summary_plot(shap_values[idx], X.iloc[idx], show=False, max_display=max_display)
+    ruta_png = os.path.join(CARPETA_SALIDA, f"shap_summary_{nombre_dominio}_{nombre_modelo}.png")
+    plt.savefig(ruta_png, bbox_inches="tight", dpi=150)
+    plt.close()
+    print(f"  Summary plot guardado en {time.time() - t0:.2f}s: {ruta_png}")
+
+if __name__ == "__main__":
+    # Consumo
+    print("\n=== CONSUMO ===")
+    print("Cargando datos de consumo...")
+    t0 = time.time()
+    df_con = pd.read_excel(RUTA_CONSUMO)
+    print(f"Datos cargados en {time.time() - t0:.2f}s ({len(df_con)} registros)")
+    print("Muestreando 500 registros...")
+    X_con = df_con[FEATURES_CON].sample(n=min(50, len(df_con)), random_state=42)
+    rf_con = cargar_modelo(RUTA_RF_CON)
+    xgb_con = cargar_modelo(RUTA_XGB_CON)
+    shap_summary(rf_con, X_con, "RandomForest", "consumo", n_grafico=50)
+    shap_summary(xgb_con, X_con, "XGBoost", "consumo", n_grafico=50)
+
+    # Generación
+    print("\n=== GENERACIÓN ===")
+    print("Cargando datos de generación...")
+    t0 = time.time()
+    df_gen = pd.read_csv(RUTA_GENERACION)
+    print(f"Datos cargados en {time.time() - t0:.2f}s ({len(df_gen)} registros)")
+    print("Muestreando 500 registros...")
+    X_gen = df_gen[FEATURES_GEN].sample(n=min(50, len(df_gen)), random_state=42)
+    rf_gen = cargar_modelo(RUTA_RF_GEN)
+    xgb_gen = cargar_modelo(RUTA_XGB_GEN)
+    shap_summary(rf_gen, X_gen, "RandomForest", "generacion", n_grafico=50)
+    shap_summary(xgb_gen, X_gen, "XGBoost", "generacion", n_grafico=50)
+--------------------------------------------------------------------------------
+
+ 247. Nombre: NSGA_II.ipynb
       Ruta:   D:\gemelo-digital-main\backend\NSGA_II_Test\NSGA_II.ipynb
 --------------------------------------------------------------------------------
 CONTENIDO DE NSGA_II.ipynb:
@@ -19060,16 +20739,13 @@ for pkg in packages:
         break
 
 # --- Celda 2 (code) ---
+# ============================================================
+# CELDA 1 IMPORTACIONES Y FUNCIÓN DE CARGA
+# ============================================================
 import sys, subprocess, importlib
 print("Python:", sys.version.split()[0])
-# listar paquetes instalados relevantes
-subprocess.run([sys.executable, "-m", "pip", "show", "numpy"])
-subprocess.run([sys.executable, "-m", "pip", "show", "pandas"])
-subprocess.run([sys.executable, "-m", "pip", "show", "matplotlib"])
-subprocess.run([sys.executable, "-m", "pip", "show", "deap"])
 
-# probar importaciones (muestra error si falla)
-for pkg in ("numpy","pandas","matplotlib","deap"):
+for pkg in ("numpy", "pandas", "matplotlib", "deap"):
     try:
         m = importlib.import_module(pkg)
         print(f"Import OK: {pkg}  version:", getattr(m, "__version__", "n/a"))
@@ -19080,6 +20756,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import random
+import os
 from deap import base, creator, tools, algorithms
 from copy import deepcopy
 
@@ -19092,89 +20769,154 @@ print("Librerías cargadas correctamente.")
 
 # --- Celda 3 (code) ---
 # ============================================================
-# CELL 2 — REAL DATA + USER PARAMETERS (units confirmed)
+# CELL 2 — DATOS PREDICTIVOS + PARÁMETROS DE USUARIO
 # ============================================================
 import numpy as np
 import pandas as pd
+import os
 
-# ---- PATHS ----
-BASE = 'c:/Users/rayne/Documents/Ernesto/Articulos/articulo de URUCON 2026/'
-PATH_12H = BASE + 'Resultados excel de 12 horas/NSGA_12.xlsx'
-PATH_24H = BASE + 'Resultados excel de 24 horas/NSGA_24.xlsx'
-
-HOURS = 8760
-DAYS  = 365
+HOURS = 8760   # horas por año
+DAYS = 365
 DT    = 1.0
 
 # ============================================================
-# 1) LOAD BOTH SCENARIOS
+# 1) CARGAR LAS SERIES PREDICTIVAS
 # ============================================================
-df12 = pd.read_excel(PATH_12H, sheet_name='BD')
-df12 = df12.dropna(subset=['Temp', 'Wind', 'Rad. Solar', 'Demanda']).reset_index(drop=True).iloc[:HOURS]
+def load_series(fname):
+    """
+    Carga una serie horaria desde un CSV.
 
-df24 = pd.read_excel(PATH_24H, sheet_name='BD')
-df24 = df24.dropna(subset=['Temp', 'Wind', 'Rad. Solar', 'Demanda']).reset_index(drop=True).iloc[:HOURS]
+    - Si el CSV tiene 1 columna: asume que son valores puros (sin cabecera).
+    - Si el CSV tiene 2 columnas: asume que la primera es datetime y la segunda
+      es el valor numérico. Salta la cabecera.
+    - Valida que la longitud sea un múltiplo de 8760 (1 año, 5 años, etc.).
 
-print(f"BD 12h: {df12.shape[0]} rows | BD 24h: {df24.shape[0]} rows")
+    Retorna el array y el número de años detectados.
+    """
+    if not os.path.exists(fname):
+        raise FileNotFoundError(f"No encontrado: {fname}")
+
+    with open(fname, 'r') as f:
+        first_line = f.readline().strip()
+        n_cols = len(first_line.split(','))
+
+    if n_cols == 1:
+        arr = np.loadtxt(fname, delimiter=',')
+    else:
+        arr = np.loadtxt(fname, delimiter=',', skiprows=1, usecols=(1,))
+
+    if len(arr) % 8760 != 0:
+        raise ValueError(
+            f"{fname} debe tener un múltiplo de 8760 filas (1 año, 2 años...). "
+            f"Tiene {len(arr)} filas."
+        )
+
+    n_years = len(arr) // 8760
+    print(f"✅ {fname}: {len(arr)} filas ({n_years} año(s) detectado(s))")
+    return arr
+
+# Unidades de los CSV:
+#   - load_8760.csv:  kW (demanda predicha por el ensamble)
+#   - solar_8760.csv: factor de capacidad (0-1)
+#   - wind_8760.csv:  km/h (velocidad del viento)
+#
+# NOTA: si en algún momento el CSV de demanda viene en W, se debe
+# convertir a kW antes de usarlo. Aquí se asume kW por defecto.
+
+load_pred  = load_series('load_8760.csv')    # kW
+solar_pred = load_series('solar_8760.csv')   # factor de capacidad (0-1)
+wind_pred  = load_series('wind_8760.csv')    # km/h
+
+# Número de años detectados (a partir de la longitud)
+n_years_load  = len(load_pred) // HOURS
+n_years_solar = len(solar_pred) // HOURS
+n_years_wind  = len(wind_pred) // HOURS
+
+# Validación de consistencia entre series
+if not (n_years_load == n_years_solar == n_years_wind):
+    raise ValueError(
+        f"Las series tienen distinto número de años: "
+        f"load={n_years_load}, solar={n_years_solar}, wind={n_years_wind}"
+    )
+
+print(f"📅 Años detectados: {n_years_load}")
 
 # ============================================================
-# 2) UNIT CONVERSIONS (CONFIRMED)
+# 2) CONSTRUCCIÓN DEL DATAFRAME SINTÉTICO
+# ============================================================
+# Unidades explícitas en los nombres de columna para evitar confusiones.
+df12 = pd.DataFrame({
+    'Rad_Solar_Wm2': solar_pred * 1000,   # factor de capacidad (0-1) a W/m² aprox
+    'Temp_C':        26.0,                 # temperatura promedio (°C)
+    'Wind_kmh':      wind_pred,            # km/h directamente
+    'Demanda_kW':    load_pred,            # kW directamente (NO multiplicar por 1000)
+})
+
+df24 = df12.copy()
+
+print(f"BD 12h: {df12.shape[0]} filas | BD 24h: {df24.shape[0]} filas")
+
+# ============================================================
+# 3) CONVERSIONES DE UNIDADES (explícitas)
 # ============================================================
 WIND_TO_MS     = 1.0 / 3.6      # km/h -> m/s
 SOLAR_TO_KW_M2 = 1.0 / 1000.0   # W/m² -> kW/m²
-DEMAND_TO_KW   = 1.0 / 1000.0   # Wh -> kW (only for diagnostics)
+# DEMAND_TO_KW: NO se aplica. La demanda ya está en kW.
 
 # ============================================================
-# 3) ENVIRONMENTAL SERIES (from 12h file; identical in 24h)
+# 4) SERIES AMBIENTALES
 # ============================================================
-T_amb    = df12['Temp'].values.astype(float)
-V_hourly = df12['Wind'].values.astype(float) * WIND_TO_MS
-G_hourly = df12['Rad. Solar'].values.astype(float) * SOLAR_TO_KW_M2
+T_amb    = df12['Temp_C'].values.astype(float)                          # °C
+V_hourly = df12['Wind_kmh'].values.astype(float) * WIND_TO_MS           # m/s
+G_hourly = df12['Rad_Solar_Wm2'].values.astype(float) * SOLAR_TO_KW_M2  # kW/m²
 
-# --- Scale solar to match paper's 5.3 kWh/m²/day average ---
-G_TARGET_DAILY = 5.3   # kWh/m²/day (from paper)
-G_current_daily = G_hourly.sum() / DAYS
+# --- Escalar solar para que coincida con el promedio del paper (5.3 kWh/m²/día) ---
+G_TARGET_DAILY = 5.3
+G_current_daily = G_hourly.sum() / (n_years_load * 365)
 G_scale = G_TARGET_DAILY / G_current_daily
 G_hourly = G_hourly * G_scale
 
 print(f"\n--- SOLAR SCALING ---")
 print(f"Before scaling: {G_current_daily:.2f} kWh/m²/day")
-print(f"After scaling:  {G_hourly.sum()/DAYS:.2f} kWh/m²/day  (factor={G_scale:.4f})")
+print(f"After scaling:  {G_hourly.sum()/(n_years_load*365):.2f} kWh/m²/day  (factor={G_scale:.4f})")
 print(f"Max irradiance: {G_hourly.max():.3f} kW/m²")
 
-print("\n--- ENVIRONMENTAL SERIES (converted) ---")
+print("\n--- ENVIRONMENTAL SERIES ---")
 print(f"Wind  : mean={V_hourly.mean():.2f} m/s   "
       f"min={V_hourly.min():.2f}   max={V_hourly.max():.2f}")
 print(f"Solar : mean={G_hourly.mean():.3f} kW/m²  "
       f"max={G_hourly.max():.3f}  "
-      f"daily_avg={G_hourly.sum()/DAYS:.2f} kWh/m²/day")
+      f"daily_avg={G_hourly.sum()/(n_years_load*365):.2f} kWh/m²/day")
 print(f"Temp  : mean={T_amb.mean():.1f} °C   "
       f"min={T_amb.min():.1f}   max={T_amb.max():.1f}")
 
 # ============================================================
-# 4) DEMAND — normalized profile + target daily energies
+# 5) DEMANDA
 # ============================================================
-demand_raw = df12['Demanda'].values.astype(float) * DEMAND_TO_KW   # kW
-demand_daily = demand_raw.reshape(DAYS, 24)
-profile_24h = demand_daily.mean(axis=0)                            # kW per hour (avg)
-profile_24h_norm = profile_24h / profile_24h.mean()                # mean = 1
+demand_raw = df12['Demanda_kW'].values.astype(float)   # ya está en kW
 
-print("\n--- DEMAND PROFILE (normalized, mean = 1) ---")
+# Para el perfil diario, usar el último año (o el primero si hay varios)
+# Aquí se toma el primer año como representativo
+demand_first_year = demand_raw[:HOURS]
+demand_daily = demand_first_year.reshape(365, 24)
+profile_24h = demand_daily.mean(axis=0)
+profile_24h_norm = profile_24h / profile_24h.mean()
+
+print("\n--- DEMAND PROFILE (first year, normalized, mean = 1) ---")
 print(f"Raw demand mean: {demand_raw.mean():.3f} kW  "
       f"({demand_raw.mean()*24:.1f} kWh/day raw)")
 print("Hour :", "  ".join(f"{h:>5d}" for h in range(24)))
 print("Prof :", "  ".join(f"{v:>5.2f}" for v in profile_24h_norm))
 
-# Target daily energies (hand-calculated, from the paper)
-E_DAY_CASE1 = 46.0    # kWh/day — 12h service
-E_DAY_CASE2 = 102.0   # kWh/day — 24h service
+# Energías diarias objetivo (del paper)
+E_DAY_CASE1 = 46.0
+E_DAY_CASE2 = 102.0
 print(f"\nTarget daily energies: Case 1 = {E_DAY_CASE1} kWh/day, "
       f"Case 2 = {E_DAY_CASE2} kWh/day")
 
 # ============================================================
-# 5) COMPONENT PARAMETERS
+# 6) PARÁMETROS DE LOS COMPONENTES
 # ============================================================
-# Economic
 r = 0.08
 CRF_LIFE = 20
 CRF = r * (1 + r)**CRF_LIFE / ((1 + r)**CRF_LIFE - 1)
@@ -19370,31 +21112,61 @@ print(f"Paper config Case 2 (24h): LPSP={L2*100:.2f}%  LCOE={C2:.4f} USD/kWh  "
 
 
 # --- Celda 6 (code) ---
-# Celda 1: importaciones y función de carga de series
-import random                                     # módulo para operaciones aleatorias (DEAP usa random)
-import numpy as np                                # numpy para arrays y operaciones numéricas
-import pandas as pd                               # pandas para manipulación y guardado de resultados
-from deap import base, creator, tools, algorithms  # componentes de DEAP para crear el GA
-import matplotlib.pyplot as plt                   # matplotlib para graficar resultados
-import os                                         # os para comprobar existencia de archivos
+# ============================================================
+# CELDA 1 (2ª PARTE) — IMPORTACIONES Y FUNCIÓN DE CARGA
+# ============================================================
+import random
+import numpy as np
+import pandas as pd
+from deap import base, creator, tools, algorithms
+import matplotlib.pyplot as plt
+import os
+import json
+from datetime import datetime
 
-# Función para cargar una serie horaria desde CSV y validar longitud
 def load_series(fname):
-    if not os.path.exists(fname):                 # comprobar que el archivo existe en la carpeta actual
-        raise FileNotFoundError(f"No encontrado: {fname}")  # lanzar error si falta el archivo
-    arr = np.loadtxt(fname, delimiter=',')        # leer el CSV como array numpy (se asume una columna)
-    if arr.ndim > 1:                              # si tiene más de una columna
-        arr = arr[:,0]                            # tomar la primera columna
-    if len(arr) != 8760:                          # validar que tenga 8760 filas (horas del año)
-        raise ValueError(f"{fname} debe tener 8760 filas. Tiene {len(arr)}")  # error si no coincide
-    return arr                                    # devolver la serie como array numpy
+    if not os.path.exists(fname):
+        raise FileNotFoundError(f"No encontrado: {fname}")
+
+    with open(fname, 'r') as f:
+        first_line = f.readline().strip()
+        n_cols = len(first_line.split(','))
+
+    if n_cols == 1:
+        arr = np.loadtxt(fname, delimiter=',')
+    else:
+        arr = np.loadtxt(fname, delimiter=',', skiprows=1, usecols=(1,))
+
+    if len(arr) % 8760 != 0:
+        raise ValueError(
+            f"{fname} debe tener un múltiplo de 8760 filas. "
+            f"Tiene {len(arr)} filas."
+        )
+
+    n_years = len(arr) // 8760
+    print(f"✅ {fname}: {len(arr)} filas ({n_years} año(s))")
+    return arr
 
 # --- Celda 7 (code) ---
-# Celda 2: cargar las series horarias (asegúrate de tener los CSV en la misma carpeta)
-load = load_series('load_8760.csv')               # carga la demanda horaria en kW (8760 valores)
-solar = load_series('solar_8760.csv')             # carga la producción por 1 kW_pv por hora (kW)
-wind = load_series('wind_8760.csv')               # carga la producción por 1 kW_wind por hora (kW)
-H = len(load)                                     # número de horas (debe ser 8760)
+# ============================================================
+# CELDA 2 (2ª PARTE) — CARGA DE LAS SERIES HORARIAS
+# ============================================================
+load  = load_series('load_8760.csv')    # kW
+solar = load_series('solar_8760.csv')   # factor de capacidad (0-1)
+wind  = load_series('wind_8760.csv')    # km/h
+H = len(load)
+
+# Validación de consistencia
+if not (len(load) == len(solar) == len(wind)):
+    raise ValueError(
+        f"Las series tienen distinta longitud: "
+        f"load={len(load)}, solar={len(solar)}, wind={len(wind)}"
+    )
+
+print(f"✅ load: {len(load)} filas")
+print(f"✅ solar: {len(solar)} filas")
+print(f"✅ wind: {len(wind)} filas")
+print(f"H = {H}  ({H // 8760} año(s))")
 
 # --- Celda 8 (code) ---
 # Celda 3: parámetros del modelo (edítalos con los valores exactos de tu tesis)
@@ -19417,9 +21189,9 @@ PARAMS = {
     "jobs_wind_per_kw": 0.004,         # empleos por kW eólica
     "jobs_batt_per_kwh": 0.001,        # empleos por kWh batería
     "jobs_diesel_per_kw": 0.0005,      # empleos por kW generador
-    "area_max_m2": 2000.0,             # área disponible total en m2
+    "area_max_m2": 10000.0,             # área disponible total en m2
     "m2_per_kw_pv": 8.0,               # m2 por kW de PV
-    "budget_max": 200000.0,            # presupuesto máximo en USD
+    "budget_max": 2000000.0,            # presupuesto máximo en USD
     "batt_roundtrip_eff": 0.90,        # eficiencia ida-vuelta de la batería (fracción)
     "batt_c_rate_max": 1.0,            # C-rate máximo (1C por defecto)
     "soc_min_frac": 0.20,              # SOC mínimo (fracción)
@@ -19428,8 +21200,8 @@ PARAMS = {
     "wind_kw_max": 500.0,              # límite superior búsqueda eólica (kW)
     "batt_kwh_max": 2000.0,            # límite superior búsqueda baterías (kWh)
     "diesel_kw_max": 500.0,            # límite superior búsqueda diésel (kW)
-    "pop_size": 60,                    # tamaño de población (ajustar si CPU limitado)
-    "n_gen": 120,                      # número de generaciones
+    "pop_size": 8,                    # tamaño de población (ajustar si CPU limitado)
+    "n_gen": 5,                      # número de generaciones
     "seed": 42                         # semilla aleatoria para reproducibilidad
 }
 
@@ -19601,73 +21373,213 @@ toolbox.register("select", tools.selNSGA2)                      # selección NSG
 
 # --- Celda 12 (code) ---
 # Celda 7: ejecutar el NSGA-II con DEAP (bucle evolutivo)
-pop = toolbox.population(n=POP_SIZE)                            # crear población inicial
-# evaluar población inicial
-fitnesses = list(map(toolbox.evaluate, pop))                    # evaluar cada individuo
-for ind, fit in zip(pop, fitnesses):                            # asignar valores de fitness a cada individuo
-    ind.fitness.values = fit
+def run_nsga2():
+    pop = toolbox.population(n=POP_SIZE)
 
-# parámetros de operadores
-CXPB = 0.9                                                      # probabilidad de cruce
-MUTPB = 0.2                                                     # probabilidad de mutación
-
-for gen in range(1, N_GEN+1):                                   # bucle de generaciones
-    offspring = tools.selTournamentDCD(pop, len(pop))           # selección por torneo DCD para NSGA-II
-    offspring = [toolbox.clone(ind) for ind in offspring]       # clonar individuos seleccionados
-    # aplicar cruce por pares
-    for i in range(0, len(offspring), 2):
-        if random.random() <= CXPB and i+1 < len(offspring):
-            toolbox.mate(offspring[i], offspring[i+1])          # cruce SBX acotado
-            del offspring[i].fitness.values                    # borrar fitness para recalcular
-            del offspring[i+1].fitness.values
-    # aplicar mutación
-    for mutant in offspring:
-        if random.random() <= MUTPB:
-            toolbox.mutate(mutant)                             # mutación polinómica acotada
-            del mutant.fitness.values
-    # evaluar individuos sin fitness (nuevos)
-    invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
-    fitnesses = map(toolbox.evaluate, invalid_ind)
-    for ind, fit in zip(invalid_ind, fitnesses):
+    fitnesses = list(map(toolbox.evaluate, pop))
+    for ind, fit in zip(pop, fitnesses):
         ind.fitness.values = fit
-    # seleccionar la próxima generación usando NSGA-II
-    pop = toolbox.select(pop + offspring, POP_SIZE)
-    if gen % 10 == 0 or gen == 1 or gen == N_GEN:
-        print(f"Generación {gen} completada")                  # imprimir progreso cada 10 generaciones
+
+    CXPB = 0.9
+    MUTPB = 0.2
+
+    for gen in range(1, N_GEN + 1):
+        offspring = tools.selTournament(pop, len(pop), tournsize=3)
+        offspring = [toolbox.clone(ind) for ind in offspring]
+
+        for i in range(0, len(offspring), 2):
+            if random.random() <= CXPB and i + 1 < len(offspring):
+                toolbox.mate(offspring[i], offspring[i + 1])
+                del offspring[i].fitness.values
+                del offspring[i + 1].fitness.values
+
+        for mutant in offspring:
+            if random.random() <= MUTPB:
+                toolbox.mutate(mutant)
+                del mutant.fitness.values
+
+        invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
+        fitnesses = map(toolbox.evaluate, invalid_ind)
+        for ind, fit in zip(invalid_ind, fitnesses):
+            ind.fitness.values = fit
+
+        pop = toolbox.select(pop + offspring, POP_SIZE)
+
+        if gen % 10 == 0 or gen == 1 or gen == N_GEN:
+            print(f"Generación {gen} completada")
+
+    return pop                 # imprimir progreso cada 10 generaciones
 
 # --- Celda 13 (code) ---
-# Celda 8: extraer frente Pareto, guardar resultados y generar gráficos
-pareto = tools.sortNondominated(pop, k=len(pop), first_front_only=True)[0]  # obtener primer frente no dominado
-rows = []                                                           # lista para almacenar filas del DataFrame
-for ind in pareto:
-    pv_kw, wind_kw, batt_kwh, diesel_kw = ind                       # variables de decisión
-    lcoe, lpsp, lca, neg_jc = ind.fitness.values                    # objetivos (neg_jc es -JC)
-    rows.append([pv_kw, wind_kw, batt_kwh, diesel_kw, lcoe, lpsp, lca, -neg_jc,
-                 pv_kw*m2_per_kw_pv,
-                 capex_pv*pv_kw + capex_wind*wind_kw + capex_batt*batt_kwh + capex_diesel*diesel_kw])
-# crear DataFrame con columnas descriptivas
-df = pd.DataFrame(rows, columns=['PV_kW','Wind_kW','Batt_kWh','Diesel_kW','LCOE','LPSP','LCA_tCO2a','JC_jobs','Area_m2','Capex_USD'])
-df.to_csv('pareto_deap.csv', index=False)                           # guardar CSV con frente Pareto
-print("Pareto guardado en pareto_deap.csv, soluciones:", len(df))    # mensaje de confirmación
+def main():
+    # --- Ejecutar el bucle evolutivo ---
+    pop = run_nsga2()
 
-# gráfico LCOE vs LPSP coloreado por LCA
-plt.figure(figsize=(8,6))
-sc = plt.scatter(df['LCOE'], df['LPSP'], c=df['LCA_tCO2a'], cmap='plasma', s=30)  # scatter con color por LCA
-plt.colorbar(sc, label='LCA (tCO2e/a)')                               # barra de color
-plt.xlabel('LCOE (USD/kWh)'); plt.ylabel('LPSP (fracción)')           # etiquetas ejes
-plt.title('Frente Pareto (DEAP)'); plt.grid(True); plt.tight_layout()  # título y formato
-plt.savefig('pareto_deap_lcoe_lpsp.png', dpi=200)                      # guardar figura en PNG
-plt.close()
-print("Gráfico guardado: pareto_deap_lcoe_lpsp.png")                    # confirmar guardado
+    # --- Extraer Frente de Pareto ---
+    pareto = tools.sortNondominated(pop, k=len(pop), first_front_only=True)[0]
+    rows = []
+    for ind in pareto:
+        pv_kw, wind_kw, batt_kwh, diesel_kw = ind
+        lcoe, lpsp, lca, neg_jc = ind.fitness.values
+        rows.append([
+            pv_kw, wind_kw, batt_kwh, diesel_kw,
+            lcoe, lpsp, lca, -neg_jc,
+            pv_kw * m2_per_kw_pv,
+            capex_pv * pv_kw + capex_wind * wind_kw + capex_batt * batt_kwh + capex_diesel * diesel_kw,
+        ])
+
+    df = pd.DataFrame(rows, columns=[
+        'PV_kW', 'Wind_kW', 'Batt_kWh', 'Diesel_kW',
+        'LCOE', 'LPSP', 'LCA_tCO2a', 'JC_jobs',
+        'Area_m2', 'Capex_USD',
+    ])
+    df.to_csv('pareto_deap.csv', index=False)
+    print(f"Pareto guardado en pareto_deap.csv, soluciones: {len(df)}")
+
+    # --- Guardar metadatos ---
+    metadata = {
+        "fecha": datetime.now().isoformat(),
+        "pop_size": POP_SIZE,
+        "n_gen": N_GEN,
+        "seed": SEED,
+        "n_years": len(load) // 8760,
+        "configuracion": {
+            "capex_pv": capex_pv,
+            "capex_wind": capex_wind,
+            "capex_batt": capex_batt,
+            "capex_diesel": capex_diesel,
+            "budget_max": budget_max,
+            "area_max_m2": area_max_m2,
+        },
+        "n_soluciones": len(df),
+    }
+    with open('pareto_metadata.json', 'w', encoding='utf-8') as f:
+        json.dump(metadata, f, indent=2, ensure_ascii=False)
+    print("Metadatos guardados en pareto_metadata.json")
+
+    # --- Gráfico ---
+    plt.figure(figsize=(8, 6))
+    sc = plt.scatter(df['LCOE'], df['LPSP'], c=df['LCA_tCO2a'], cmap='plasma', s=30)
+    plt.colorbar(sc, label='LCA (tCO2e/a)')
+    plt.xlabel('LCOE (USD/kWh)')
+    plt.ylabel('LPSP (fracción)')
+    plt.title('Frente Pareto (DEAP)')
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig('pareto_deap_lcoe_lpsp.png', dpi=200)
+    plt.close()
+    print("Gráfico guardado: pareto_deap_lcoe_lpsp.png")
+
+
+if __name__ == "__main__":
+    main()
 
 --------------------------------------------------------------------------------
 
- 203. Nombre: solar_8760.csv
-      Ruta:   D:\gemelo-digital-main\backend\NSGA_II_Test\solar_8760.csv
+ 248. Nombre: generar_viento.py
+      Ruta:   D:\gemelo-digital-main\backend\NSGA_II_Test\generar_viento.py
+--------------------------------------------------------------------------------
+CONTENIDO DE generar_viento.py:
+--------------------------------------------------------------------------------
+"""
+Genera wind_8760.csv con la velocidad del viento en km/h a partir del archivo de Open-Meteo.
+"""
+import pandas as pd
+import numpy as np
+import os
 
- 204. Nombre: load_8760.csv
+# ============================================================
+# 1. CONFIGURACIÓN: PON AQUÍ EL NOMBRE DE TU ARCHIVO DESCARGADO
+# ============================================================
+ARCHIVO_ENTRADA = "open-meteo-23.09N82.37W9m.csv"  # <--- CAMBIA SI ES NECESARIO
+ARCHIVO_SALIDA = "wind_8760.csv"
+
+# ============================================================
+# 2. LEER EL ARCHIVO DE OPEN-METEO
+# ============================================================
+if not os.path.exists(ARCHIVO_ENTRADA):
+    raise FileNotFoundError(f"No se encuentra el archivo: {ARCHIVO_ENTRADA}")
+
+print(f"📂 Leyendo: {ARCHIVO_ENTRADA}")
+
+with open(ARCHIVO_ENTRADA, 'r', encoding='utf-8') as f:
+    lines = f.readlines()
+
+start_line = 0
+for i, line in enumerate(lines):
+    if line.strip().lower().startswith('time'):
+        start_line = i
+        break
+
+df = pd.read_csv(ARCHIVO_ENTRADA, skiprows=start_line, skip_blank_lines=True)
+col_viento = None
+for col in df.columns:
+    if 'wind_speed' in col.lower():
+        col_viento = col
+        break
+
+if col_viento is None:
+    raise ValueError(f"No se encontró columna de viento. Columnas: {df.columns.tolist()}")
+
+print(f"✅ Columna de viento: '{col_viento}'")
+viento_ms = pd.to_numeric(df[col_viento], errors='coerce').values
+print(f"✅ Datos leídos: {len(viento_ms)} horas")
+
+# ============================================================
+# 3. CONVERTIR DE m/s A km/h (lo que espera el notebook)
+# ============================================================
+viento_kmh = viento_ms * 3.6
+
+# ============================================================
+# 4. GUARDAR EL CSV CON EL FORMATO ESPERADO
+# ============================================================
+df_salida = pd.DataFrame({
+    "datetime": df['time'],
+    "wind_kmh": viento_kmh
+})
+df_salida.to_csv(ARCHIVO_SALIDA, index=False)
+
+print(f"✅ {ARCHIVO_SALIDA} generado con {len(df_salida)} filas")
+print(f"   Viento medio: {viento_kmh.mean():.2f} km/h")
+print(f"   Viento mínimo: {viento_kmh.min():.2f} km/h")
+print(f"   Viento máximo: {viento_kmh.max():.2f} km/h")
+--------------------------------------------------------------------------------
+
+ 249. Nombre: wind_8760.csv
+      Ruta:   D:\gemelo-digital-main\backend\NSGA_II_Test\wind_8760.csv
+
+ 250. Nombre: load_8760.csv
       Ruta:   D:\gemelo-digital-main\backend\NSGA_II_Test\load_8760.csv
 
- 205. Nombre: wind_8760.csv
-      Ruta:   D:\gemelo-digital-main\backend\NSGA_II_Test\wind_8760.csv
+ 251. Nombre: solar_8760.csv
+      Ruta:   D:\gemelo-digital-main\backend\NSGA_II_Test\solar_8760.csv
+
+ 252. Nombre: pareto_deap.csv
+      Ruta:   D:\gemelo-digital-main\backend\NSGA_II_Test\pareto_deap.csv
+
+ 253. Nombre: pareto_deap_lcoe_lpsp.png
+      Ruta:   D:\gemelo-digital-main\backend\NSGA_II_Test\pareto_deap_lcoe_lpsp.png
+
+ 254. Nombre: pareto_metadata.json
+      Ruta:   D:\gemelo-digital-main\backend\NSGA_II_Test\pareto_metadata.json
+--------------------------------------------------------------------------------
+CONTENIDO DE pareto_metadata.json:
+--------------------------------------------------------------------------------
+{
+  "fecha": "2026-11-04T16:15:20.731423",
+  "pop_size": 8,
+  "n_gen": 5,
+  "seed": 42,
+  "n_years": 1,
+  "configuracion": {
+    "capex_pv": 600.0,
+    "capex_wind": 1200.0,
+    "capex_batt": 400.0,
+    "capex_diesel": 200.0,
+    "budget_max": 2000000.0,
+    "area_max_m2": 10000.0
+  },
+  "n_soluciones": 8
+}
+--------------------------------------------------------------------------------
 

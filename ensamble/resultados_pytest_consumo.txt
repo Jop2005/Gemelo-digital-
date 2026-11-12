@@ -5,25 +5,32 @@ rootdir: D:\gemelo-digital-main\backend
 configfile: pytest.ini
 plugins: anyio-4.15.1, mock-3.14.0, asyncio-1.4.0, respx-0.23.1, platformdirs-4.13.6
 asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
-collecting ... collected 18 items
+collecting ... collected 25 items
 
-test\consumo.py::TestConsumo::test_cp01_generar_segmentacion_consumo PASSED [  5%]
-test\consumo.py::TestConsumo::test_cp02_entrenar_knn_imputer PASSED      [ 11%]
-test\consumo.py::TestConsumo::test_cp03_entrenar_random_forest PASSED    [ 16%]
-test\consumo.py::TestConsumo::test_cp04_entrenar_xgboost PASSED          [ 22%]
-test\consumo.py::TestConsumo::test_cp05_evaluar_modelos PASSED           [ 27%]
-test\consumo.py::TestConsumo::test_cp06_optimizar_ensamblaje PASSED      [ 33%]
-test\consumo.py::TestConsumo::test_cp07_generar_interpretabilidad PASSED [ 38%]
-test\consumo.py::TestConsumo::test_cp10_prediccion_desde_archivo PASSED  [ 44%]
-test\consumo.py::TestConsumo::test_cp11_prediccion_manual PASSED         [ 50%]
-test\consumo.py::TestConsumo::test_cp12_columna_faltante PASSED          [ 55%]
-test\consumo.py::TestConsumo::test_cp13_valores_nulos PASSED             [ 61%]
-test\consumo.py::TestCajaBlancaConsumo::test_cp16_orchestrator_configuracion_existente PASSED [ 66%]
-test\consumo.py::TestCajaBlancaConsumo::test_cp17_orchestrator_fallback PASSED [ 72%]
-test\consumo.py::TestCajaBlancaConsumo::test_cp18_orchestrator_ensamblaje PASSED [ 77%]
-test\consumo.py::TestCajaBlancaConsumo::test_cp19_orchestrator_sin_inicializar PASSED [ 83%]
-test\consumo.py::TestCajaBlancaConsumo::test_cp20_weight_optimizer_un_modelo PASSED [ 88%]
-test\consumo.py::TestCajaBlancaConsumo::test_cp21_weight_optimizer_dos_modelos PASSED [ 94%]
-test\consumo.py::TestCajaBlancaConsumo::test_cp22_weight_optimizer_predicciones_vacias PASSED [100%]
+ensamble/test/consumo.py::TestConsumo::test_cp01_generar_segmentacion_consumo PASSED [  4%]
+ensamble/test/consumo.py::TestConsumo::test_cp02_entrenar_knn_imputer PASSED [  8%]
+ensamble/test/consumo.py::TestConsumo::test_cp03_entrenar_random_forest PASSED [ 12%]
+ensamble/test/consumo.py::TestConsumo::test_cp04_entrenar_xgboost PASSED [ 16%]
+ensamble/test/consumo.py::TestConsumo::test_cp05_evaluar_modelos PASSED  [ 20%]
+ensamble/test/consumo.py::TestConsumo::test_cp06_optimizar_ensamblaje PASSED [ 24%]
+ensamble/test/consumo.py::TestConsumo::test_cp07_generar_interpretabilidad PASSED [ 28%]
+ensamble/test/consumo.py::TestConsumo::test_cp10_prediccion_desde_archivo PASSED [ 32%]
+ensamble/test/consumo.py::TestConsumo::test_cp11_prediccion_manual PASSED [ 36%]
+ensamble/test/consumo.py::TestConsumo::test_cp12_columna_faltante PASSED [ 40%]
+ensamble/test/consumo.py::TestConsumo::test_cp13_valores_nulos PASSED    [ 44%]
+ensamble/test/consumo.py::TestConsumo::test_cp23_archivo_formato_incorrecto PASSED [ 48%]
+ensamble/test/consumo.py::TestConsumo::test_cp24_archivo_vacio PASSED    [ 52%]
+ensamble/test/consumo.py::TestConsumo::test_cp25_hora_fuera_rango PASSED [ 56%]
+ensamble/test/consumo.py::TestConsumo::test_cp26_mes_fuera_rango PASSED  [ 60%]
+ensamble/test/consumo.py::TestCajaBlancaConsumo::test_cp16_orchestrator_configuracion_existente PASSED [ 64%]
+ensamble/test/consumo.py::TestCajaBlancaConsumo::test_cp17_orchestrator_fallback PASSED [ 68%]
+ensamble/test/consumo.py::TestCajaBlancaConsumo::test_cp18_orchestrator_ensamblaje PASSED [ 72%]
+ensamble/test/consumo.py::TestCajaBlancaConsumo::test_cp19_orchestrator_sin_inicializar PASSED [ 76%]
+ensamble/test/consumo.py::TestCajaBlancaConsumo::test_cp20_weight_optimizer_un_modelo PASSED [ 80%]
+ensamble/test/consumo.py::TestCajaBlancaConsumo::test_cp21_weight_optimizer_dos_modelos PASSED [ 84%]
+ensamble/test/consumo.py::TestCajaBlancaConsumo::test_cp22_weight_optimizer_predicciones_vacias PASSED [ 88%]
+ensamble/test/consumo.py::TestCajaBlancaConsumo::test_cp23_orchestrator_muestra_vacia PASSED [ 92%]
+ensamble/test/consumo.py::TestCajaBlancaConsumo::test_cp24_weight_optimizer_restriccion_suma PASSED [ 96%]
+ensamble/test/consumo.py::TestCajaBlancaConsumo::test_cp25_orchestrator_segmento_desconocido PASSED [100%]
 
-======================= 18 passed in 160.93s (0:02:40) ========================
+======================= 25 passed in 199.54s (0:03:19) ========================

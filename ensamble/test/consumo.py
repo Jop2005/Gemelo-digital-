@@ -1,5 +1,5 @@
 """
-Pruebas de Caja Negra para el dominio CONSUMO
+Pruebas de Caja Negra y Caja Blanca para el dominio CONSUMO
 Ejecutar con: pytest test/consumo.py -v
 """
 
@@ -15,10 +15,9 @@ from unittest.mock import Mock
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # =============================================================================
-# IMPORTS - CORREGIDOS: USAR REPOSITORIOS DE CONFIGURACIÓN
+# IMPORTS
 # =============================================================================
 
-# Para PREDICCIÓN (usar repositorios de predicción - solo cargar)
 from prediccion.acceso_datos.context import DatasetContext as PrediccionContext
 from prediccion.acceso_datos.config import get_config
 from prediccion.acceso_datos.joblib_model_repository import JoblibModelRepository as PrediccionModelRepo
@@ -29,13 +28,11 @@ from prediccion.acceso_datos.config_loader import ConfigLoader
 from prediccion.logica_negocio.prediccion_controller import PrediccionController
 from prediccion.logica_negocio.orchestrator import Orchestrator
 
-# Para CONFIGURACIÓN (usar repositorios de configuración - tienen guardar)
 from configuracion.acceso_datos.context import DatasetContext as ConfigContext
 from configuracion.acceso_datos.strategies_consumo import ConsumoStrategy
 from configuracion.acceso_datos.joblib_model_repository import JoblibModelRepository as ConfigModelRepo
 from configuracion.acceso_datos.joblib_imputer_repository import JoblibImputerRepository as ConfigImputerRepo
 
-# Controladores de configuración
 from configuracion.logica_negocio.segmentacion_controller import SegmentacionController
 from configuracion.logica_negocio.entrenamiento_knn_controller import EntrenadorKNNController
 from configuracion.logica_negocio.entrenamiento_rf_controller import EntrenadorRFController
@@ -60,37 +57,27 @@ def archivo_existe(nombre: str) -> bool:
 
 
 # =============================================================================
-# FIXTURES - CORREGIDOS
+# FIXTURES
 # =============================================================================
 
 @pytest.fixture(scope="session")
 def config_consumo():
-    """Configura el dominio de consumo"""
     get_config().set_dominio('consumo')
     return get_config()
 
 
 @pytest.fixture(scope="session")
 def controller_consumo(config_consumo):
-    """
-    Crea un controlador de PREDICCIÓN para el dominio de consumo.
-    Este usa repositorios de predicción (solo cargar).
-    """
     try:
-        # Para predicción usamos el context de predicción con estrategia de consumo
         from configuracion.acceso_datos.strategies_consumo import ConsumoStrategy as ConfigConsumoStrategy
         strategy = ConfigConsumoStrategy()
         context = PrediccionContext(strategy)
-        
         model_repo = PrediccionModelRepo()
         imputer_repo = PrediccionImputerRepo()
         historial_repo = HistorialRepository()
         file_reader = FileReader()
         config_loader = ConfigLoader()
-        
-        return PrediccionController(
-            context, model_repo, imputer_repo, historial_repo, file_reader, config_loader
-        )
+        return PrediccionController(context, model_repo, imputer_repo, historial_repo, file_reader, config_loader)
     except FileNotFoundError:
         pytest.skip("Pipeline de configuración de consumo no ejecutado")
         return None
@@ -98,10 +85,6 @@ def controller_consumo(config_consumo):
 
 @pytest.fixture
 def context_consumo_configuracion(config_consumo):
-    """
-    Contexto de CONFIGURACIÓN para el dominio de consumo.
-    Usa repositorios de configuración (con guardar).
-    """
     try:
         return ConfigContext(ConsumoStrategy())
     except FileNotFoundError:
@@ -111,17 +94,11 @@ def context_consumo_configuracion(config_consumo):
 
 @pytest.fixture
 def model_repo_configuracion(config_consumo):
-    """
-    Repositorio de modelos de CONFIGURACIÓN (tiene guardar).
-    """
     return ConfigModelRepo()
 
 
 @pytest.fixture
 def imputer_repo_configuracion(config_consumo):
-    """
-    Repositorio de imputadores de CONFIGURACIÓN (tiene guardar).
-    """
     return ConfigImputerRepo()
 
 
@@ -145,7 +122,6 @@ def weight_optimizer():
 # =============================================================================
 
 def crear_archivo_prueba(nombre, datos, columnas):
-    """Crea un archivo CSV de prueba"""
     DATA_DIR.mkdir(exist_ok=True)
     df = pd.DataFrame(datos, columns=columnas)
     ruta = DATA_DIR / nombre
@@ -154,7 +130,6 @@ def crear_archivo_prueba(nombre, datos, columnas):
 
 
 def crear_datos_100_filas():
-    """CP-10: Crea 100 filas para consumo"""
     np.random.seed(42)
     datos = {
         'Hora': np.random.choice(range(24), 100),
@@ -165,7 +140,6 @@ def crear_datos_100_filas():
 
 
 def crear_datos_sin_hora():
-    """CP-12: Datos sin columna Hora"""
     np.random.seed(43)
     datos = {
         'Mes': np.random.choice(range(1, 13), 50),
@@ -175,7 +149,6 @@ def crear_datos_sin_hora():
 
 
 def crear_datos_con_nulos():
-    """CP-13: Datos con 10% de valores nulos"""
     np.random.seed(44)
     n = 100
     datos = {
@@ -186,17 +159,26 @@ def crear_datos_con_nulos():
     return crear_archivo_prueba('datos_con_nulos.csv', datos, ['Hora', 'Mes', 'tipo_dia_bin'])
 
 
+def crear_archivo_vacio():
+    ruta = DATA_DIR / 'datos_vacios.csv'
+    pd.DataFrame().to_csv(ruta, index=False)
+    return ruta
+
+
+def crear_archivo_formato_incorrecto():
+    ruta = DATA_DIR / 'datos.txt'
+    with open(ruta, 'w') as f:
+        f.write("esto no es un csv")
+    return ruta
+
+
 # =============================================================================
-# PRUEBAS DE CAJA NEGRA - CONSUMO
+# PRUEBAS DE CAJA NEGRA - CONSUMO (CP-01 a CP-15, CP-23 a CP-26)
 # =============================================================================
 
 class TestConsumo:
-    """
-    Pruebas de Caja Negra para el dominio Consumo.
-    CP-01 a CP-15 (excepto CP-08, CP-09, CP-14, CP-15 que son de generación)
-    """
+    """Pruebas de Caja Negra para el dominio Consumo."""
 
-    # CP-01: Generar segmentación (consumo)
     def test_cp01_generar_segmentacion_consumo(self, context_consumo_configuracion):
         if context_consumo_configuracion is None:
             pytest.skip("Contexto no disponible")
@@ -207,7 +189,6 @@ class TestConsumo:
         assert config.get('tipo') == 'rules'
         assert segmenter.n_segments == 8
 
-    # CP-02: Entrenar KNN Imputer - CORREGIDO: usa repositorio de configuración
     def test_cp02_entrenar_knn_imputer(self, context_consumo_configuracion, imputer_repo_configuracion):
         if context_consumo_configuracion is None:
             pytest.skip("Contexto no disponible")
@@ -216,7 +197,6 @@ class TestConsumo:
         assert imputer is not None
         assert hasattr(imputer, 'transform')
 
-    # CP-03: Entrenar Random Forest - CORREGIDO: usa repositorio de configuración
     def test_cp03_entrenar_random_forest(self, context_consumo_configuracion, model_repo_configuracion):
         if context_consumo_configuracion is None:
             pytest.skip("Contexto no disponible")
@@ -226,7 +206,6 @@ class TestConsumo:
         assert resultado.modelo is not None
         assert resultado.mae is not None
 
-    # CP-04: Entrenar XGBoost - CORREGIDO: usa repositorio de configuración
     def test_cp04_entrenar_xgboost(self, context_consumo_configuracion, model_repo_configuracion):
         if context_consumo_configuracion is None:
             pytest.skip("Contexto no disponible")
@@ -236,7 +215,6 @@ class TestConsumo:
         assert resultado.modelo is not None
         assert resultado.mae is not None
 
-    # CP-05: Evaluar modelos - CORREGIDO: usa repositorio de configuración
     def test_cp05_evaluar_modelos(self, context_consumo_configuracion):
         if context_consumo_configuracion is None:
             pytest.skip("Contexto no disponible")
@@ -245,7 +223,6 @@ class TestConsumo:
         assert resultado is not None
         assert 'metricas' in resultado
 
-    # CP-06: Optimizar ensamblaje - CORREGIDO: usa repositorio de configuración
     def test_cp06_optimizar_ensamblaje(self, context_consumo_configuracion):
         if context_consumo_configuracion is None:
             pytest.skip("Contexto no disponible")
@@ -254,7 +231,6 @@ class TestConsumo:
         assert resultado is not None
         assert 'segmentos' in resultado
 
-    # CP-07: Generar interpretabilidad
     def test_cp07_generar_interpretabilidad(self, context_consumo_configuracion):
         if context_consumo_configuracion is None:
             pytest.skip("Contexto no disponible")
@@ -263,83 +239,107 @@ class TestConsumo:
         assert resultado is not None
         assert len(resultado) > 0
 
-    # CP-10: Predicción desde archivo
     def test_cp10_prediccion_desde_archivo(self, controller_consumo, features_consumo):
         if controller_consumo is None:
             pytest.skip("Controlador no disponible")
-        
         if not archivo_existe("datos_100_filas.csv"):
             crear_datos_100_filas()
-        
-        resultados = controller_consumo.predecir_archivo(
-            ruta_archivo("datos_100_filas.csv"), features_consumo
-        )
-        
+        resultados = controller_consumo.predecir_archivo(ruta_archivo("datos_100_filas.csv"), features_consumo)
         assert resultados is not None
         assert not isinstance(resultados, dict) or 'error' not in resultados
         assert len(resultados) == 100
 
-    # CP-11: Predicción manual
     def test_cp11_prediccion_manual(self, controller_consumo):
         if controller_consumo is None:
             pytest.skip("Controlador no disponible")
-        
         datos = {'Hora': 10, 'Mes': 7, 'tipo_dia_bin': 1}
         res = controller_consumo.predecir_manual(datos)
-        
         assert res is not None
         assert not isinstance(res, dict) or 'error' not in res
         assert 'prediccion' in res
         assert 'segmento' in res
         assert 'modelo' in res
 
-    # CP-12: Archivo con columna faltante
     def test_cp12_columna_faltante(self, controller_consumo, features_consumo):
         if controller_consumo is None:
             pytest.skip("Controlador no disponible")
-        
         if not archivo_existe("datos_sin_hora.csv"):
             crear_datos_sin_hora()
-        
-        resultados, _ = controller_consumo.predecir_archivo(
-            ruta_archivo("datos_sin_hora.csv"), features_consumo
-        )
-        
+        resultados, _ = controller_consumo.predecir_archivo(ruta_archivo("datos_sin_hora.csv"), features_consumo)
         assert isinstance(resultados, dict)
         assert 'error' in resultados
         assert "Columnas requeridas" in resultados['error'] or "faltan" in resultados['error'].lower()
 
-    # CP-13: Archivo con valores nulos
     def test_cp13_valores_nulos(self, controller_consumo, features_consumo):
         if controller_consumo is None:
             pytest.skip("Controlador no disponible")
-        
         if not archivo_existe("datos_con_nulos.csv"):
             crear_datos_con_nulos()
-        
-        resultado = controller_consumo.predecir_archivo(
-            ruta_archivo("datos_con_nulos.csv"), features_consumo
-        )
-
+        resultado = controller_consumo.predecir_archivo(ruta_archivo("datos_con_nulos.csv"), features_consumo)
         if isinstance(resultado, tuple):
             resultados, _ = resultado
         else:
             resultados = resultado
-        
         assert resultados is not None
         assert not isinstance(resultados, dict) or 'error' not in resultados
         assert len(resultados) > 0
 
+    # ===== CASOS NEGATIVOS (CP-23 a CP-26) =====
+
+    def test_cp23_archivo_formato_incorrecto(self, controller_consumo, features_consumo):
+        if controller_consumo is None:
+            pytest.skip("Controlador no disponible")
+        ruta = crear_archivo_formato_incorrecto()
+        resultado = controller_consumo.predecir_archivo(str(ruta), features_consumo)
+        if isinstance(resultado, tuple):
+            resultados, _ = resultado
+        else:
+            resultados = resultado
+        assert isinstance(resultados, dict)
+        assert 'error' in resultados
+        assert "Formato no soportado" in resultados['error'] or "formato" in resultados['error'].lower()
+
+    def test_cp24_archivo_vacio(self, controller_consumo, features_consumo):
+        if controller_consumo is None:
+            pytest.skip("Controlador no disponible")
+        ruta = crear_archivo_vacio()
+        resultado = controller_consumo.predecir_archivo(str(ruta), features_consumo)
+        if isinstance(resultado, tuple):
+            resultados, _ = resultado
+        else:
+            resultados = resultado
+        assert isinstance(resultados, dict)
+        assert 'error' in resultados
+        assert any(kw in resultados['error'].lower() for kw in ["vacío", "empty", "no columns"])
+
+    def test_cp25_hora_fuera_rango(self, controller_consumo):
+        if controller_consumo is None:
+            pytest.skip("Controlador no disponible")
+        datos = {'Hora': 25, 'Mes': 7, 'tipo_dia_bin': 1}
+        res = controller_consumo.predecir_manual(datos)
+        if isinstance(res, tuple):
+            res = res[0]
+        assert isinstance(res, dict)
+        assert 'error' in res
+        assert "Hora" in res['error'] or "hora" in res['error'].lower()
+
+    def test_cp26_mes_fuera_rango(self, controller_consumo):
+        if controller_consumo is None:
+            pytest.skip("Controlador no disponible")
+        datos = {'Hora': 10, 'Mes': 13, 'tipo_dia_bin': 1}
+        res = controller_consumo.predecir_manual(datos)
+        if isinstance(res, tuple):
+            res = res[0]
+        assert isinstance(res, dict)
+        assert 'error' in res
+        assert "Mes" in res['error'] or "mes" in res['error'].lower()
+
 
 # =============================================================================
-# PRUEBAS DE CAJA BLANCA - CONSUMO (CP-16 a CP-22)
+# PRUEBAS DE CAJA BLANCA - CONSUMO (CP-16 a CP-22, CP-23 a CP-25)
 # =============================================================================
 
 class TestCajaBlancaConsumo:
-    """
-    Pruebas de Caja Blanca para el dominio Consumo.
-    CP-16 a CP-22
-    """
 
     def test_cp16_orchestrator_configuracion_existente(self, orchestrator):
         mock_segmenter = Mock()
@@ -348,7 +348,6 @@ class TestCajaBlancaConsumo:
         mock_modelo = Mock()
         mock_modelo.predict.return_value = np.array([150.5])
         mock_modelo.get_nombre.return_value = "RandomForest"
-        
         orchestrator.initialize(
             segmenter=mock_segmenter,
             configuracion_segmentos={0: {'modelo': 'RandomForest'}},
@@ -357,7 +356,6 @@ class TestCajaBlancaConsumo:
         )
         muestra = pd.DataFrame({'Hora': [10], 'Mes': [7], 'tipo_dia_bin': [1]})
         resultado = orchestrator.predict(muestra)
-        
         assert resultado is not None
         assert 'prediccion' in resultado
         assert resultado['segmento'] == 0
@@ -369,12 +367,7 @@ class TestCajaBlancaConsumo:
         mock_modelo = Mock()
         mock_modelo.predict.return_value = np.array([160.0])
         mock_modelo.get_nombre.return_value = "XGBoost"
-        
-        metricas = {
-            'RandomForest': {'MAE': 10.0, 'RMSE': 15.0},
-            'XGBoost': {'MAE': 8.0, 'RMSE': 12.0}
-        }
-        
+        metricas = {'RandomForest': {'MAE': 10.0, 'RMSE': 15.0}, 'XGBoost': {'MAE': 8.0, 'RMSE': 12.0}}
         orchestrator.initialize(
             segmenter=mock_segmenter,
             configuracion_segmentos={},
@@ -383,7 +376,6 @@ class TestCajaBlancaConsumo:
         )
         muestra = pd.DataFrame({'Hora': [10], 'Mes': [7], 'tipo_dia_bin': [1]})
         resultado = orchestrator.predict(muestra)
-        
         assert resultado is not None
         assert 'prediccion' in resultado
         assert 'modelo' in resultado
@@ -393,17 +385,13 @@ class TestCajaBlancaConsumo:
         mock_segmenter = Mock()
         mock_segmenter.transform.return_value = np.array([0])
         mock_segmenter.variables = ['Hora', 'tipo_dia_bin']
-        
         mock_rf = Mock()
         mock_rf.predict.return_value = np.array([150.0])
         mock_rf.get_nombre.return_value = "RandomForest"
-        
         mock_xgb = Mock()
         mock_xgb.predict.return_value = np.array([160.0])
         mock_xgb.get_nombre.return_value = "XGBoost"
-        
         config = {0: {'modelo': 'Ensemble', 'pesos': {'RandomForest': 0.7, 'XGBoost': 0.3}}}
-        
         orchestrator.initialize(
             segmenter=mock_segmenter,
             configuracion_segmentos=config,
@@ -412,7 +400,6 @@ class TestCajaBlancaConsumo:
         )
         muestra = pd.DataFrame({'Hora': [10], 'Mes': [7], 'tipo_dia_bin': [1]})
         resultado = orchestrator.predict(muestra)
-        
         assert resultado is not None
         assert 'prediccion' in resultado
         assert 'Ensemble' in resultado['modelo']
@@ -427,7 +414,6 @@ class TestCajaBlancaConsumo:
         valores_reales = np.array([100, 110, 105])
         predicciones = {'RandomForest': np.array([102, 108, 106])}
         pesos = weight_optimizer.optimizar(valores_reales, predicciones, segmento_id=0)
-        
         assert pesos is not None
         assert 'RandomForest' in pesos
         assert pesos['RandomForest'] == 1.0
@@ -439,7 +425,6 @@ class TestCajaBlancaConsumo:
             'XGBoost': np.array([98, 112, 103, 94, 118])
         }
         pesos = weight_optimizer.optimizar(valores_reales, predicciones, segmento_id=0)
-        
         assert pesos is not None
         assert 'RandomForest' in pesos
         assert 'XGBoost' in pesos
@@ -455,10 +440,58 @@ class TestCajaBlancaConsumo:
         pesos = weight_optimizer.optimizar(valores_reales, predicciones, segmento_id=0)
         assert pesos is None
 
+    # ===== CASOS NEGATIVOS (CP-23 a CP-25) =====
 
-# =============================================================================
-# EJECUCIÓN
-# =============================================================================
+    def test_cp23_orchestrator_muestra_vacia(self, orchestrator):
+        mock_segmenter = Mock()
+        mock_segmenter.transform.return_value = np.array([])
+        mock_segmenter.variables = ['Hora']
+        mock_modelo = Mock()
+        mock_modelo.predict.return_value = np.array([])
+        orchestrator.initialize(
+            segmenter=mock_segmenter,
+            configuracion_segmentos={},
+            modelos={'RandomForest': mock_modelo},
+            metricas_evaluacion={}
+        )
+        muestra = pd.DataFrame()
+        with pytest.raises(ValueError) as excinfo:
+            orchestrator.predict(muestra)
+        assert "vacía" in str(excinfo.value).lower() or "empty" in str(excinfo.value).lower()
+
+    def test_cp24_weight_optimizer_restriccion_suma(self, weight_optimizer):
+        """Verifica que la suma de pesos sea 1 y que no haya negativos."""
+        valores_reales = np.array([100, 110, 105])
+        predicciones = {
+            'RandomForest': np.array([105, 108, 107]),
+            'XGBoost': np.array([98, 112, 103])
+        }
+        pesos = weight_optimizer.optimizar(valores_reales, predicciones, segmento_id=0)
+        assert pesos is not None
+        assert abs(sum(pesos.values()) - 1.0) < 0.001
+        for p in pesos.values():
+            assert p >= 0
+
+
+    def test_cp25_orchestrator_segmento_desconocido(self, orchestrator):
+        mock_segmenter = Mock()
+        mock_segmenter.transform.return_value = np.array([-1])
+        mock_segmenter.variables = ['Hora']
+        mock_modelo = Mock()
+        mock_modelo.predict.return_value = np.array([150.0])
+        mock_modelo.get_nombre.return_value = "RandomForest"
+        orchestrator.initialize(
+            segmenter=mock_segmenter,
+            configuracion_segmentos={},
+            modelos={'RandomForest': mock_modelo},
+            metricas_evaluacion={'RandomForest': {'MAE': 10.0}}
+        )
+        muestra = pd.DataFrame({'Hora': [10], 'Mes': [7], 'tipo_dia_bin': [1]})
+        resultado = orchestrator.predict(muestra)
+        assert resultado is not None
+        assert 'prediccion' in resultado
+        assert 'modelo' in resultado
+
 
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])

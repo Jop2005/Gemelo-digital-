@@ -13,13 +13,13 @@ class PrediccionController(BaseController):
     def predecir_archivo(self, ruta, features):
         try:
             return self._servicio.predecir_archivo(ruta, features)
-        except PrediccionError as e:
+        except (PrediccionError, ValueError) as e:
             return {'error': str(e)}, None
     
     def predecir_manual(self, datos):
         try:
             return self._servicio.predecir_manual(datos)
-        except PrediccionError as e:
+        except (PrediccionError, ValueError) as e:
             return {'error': str(e)}, None
     
     def explicar_prediccion(self, datos, features, modelo_nombre=None):
